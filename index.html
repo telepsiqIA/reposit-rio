@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TelePsiq_IA — Índice Dinâmico do Repositório</title>
+  <meta name="description" content="Índice dinâmico dos materiais TelePsiq_IA organizados por grupos: cartilhas, guias MFC/APS, roteiros de apoio ao telematriciamento e coleções temáticas." />
+  <style>
+    :root {
+      --teal-900: #032320;
+      --teal-800: #053530;
+      --teal-700: #074840;
+      --teal-600: #095C53;
+      --teal-500: #0D7A6E;
+      --teal-300: #5ec9b8;
+      --teal-100: #d0f0ea;
+      --teal-50: #f0faf8;
+      --amber-50: #fffbeb;
+      --amber-100: #fef3c7;
+      --amber-700: #a16207;
+      --blue-50: #eff6ff;
+      --blue-700: #1d4ed8;
+      --purple-50: #faf5ff;
+      --purple-700: #7e22ce;
+      --green-50: #f0fdf4;
+      --green-700: #15803d;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-500: #64748b;
+      --slate-700: #334155;
+      --slate-900: #0f172a;
+      --white: #fff;
+      --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 6px 16px rgba(15, 23, 42, 0.06);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, var(--teal-50) 0%, #ffffff 36%, var(--slate-50) 100%);
+      color: var(--slate-900);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+    .hero {
+      background: linear-gradient(135deg, var(--teal-800), var(--teal-500));
+      color: white;
+      padding: 42px 20px 34px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 12% 20%, rgba(255,255,255,0.18), transparent 26%),
+        radial-gradient(circle at 80% 10%, rgba(94,201,184,0.35), transparent 28%),
+        radial-gradient(circle at 70% 90%, rgba(255,255,255,0.12), transparent 30%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .brand {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.12);
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .brand-mark {
+      width: 32px; height: 32px; border-radius: 10px;
+      background: rgba(255,255,255,0.18);
+      display: grid; place-items: center;
+      font-weight: 900;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 760px;
+      margin: 14px 0 0;
+    }
+    .hero-panel {
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: var(--radius);
+      padding: 18px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 44px rgba(0,0,0,0.18);
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 12px;
+      min-height: 82px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat span {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 20px 52px;
+    }
+
+    .notice {
+      margin-top: -16px;
+      background: var(--amber-50);
+      border: 1px solid var(--amber-100);
+      color: var(--amber-700);
+      padding: 14px 16px;
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.9rem;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      margin: 22px 0;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(16px);
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 10px;
+    }
+    input, select {
+      width: 100%;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 12px 13px;
+      font: inherit;
+      outline: none;
+      background: white;
+      color: var(--slate-900);
+    }
+    input:focus, select:focus {
+      border-color: var(--teal-500);
+      box-shadow: 0 0 0 3px rgba(13,122,110,0.11);
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .tab {
+      border: 1px solid var(--slate-200);
+      background: white;
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 0.84rem;
+      cursor: pointer;
+      color: var(--slate-700);
+      transition: 0.16s ease;
+      user-select: none;
+    }
+    .tab:hover { transform: translateY(-1px); border-color: var(--teal-300); }
+    .tab.active {
+      background: var(--teal-500);
+      color: white;
+      border-color: var(--teal-500);
+      box-shadow: 0 8px 16px rgba(13,122,110,0.18);
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      margin: 14px 2px 0;
+      font-size: 0.86rem;
+      color: var(--slate-500);
+    }
+    .clear-btn {
+      border: 0;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      border-radius: 999px;
+      padding: 8px 11px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .clear-btn:hover { background: var(--slate-200); }
+
+    .group-section {
+      margin: 24px 0;
+    }
+    .group-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .group-title {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .group-title h2 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+    .group-icon {
+      width: 42px; height: 42px;
+      border-radius: 14px;
+      background: var(--teal-100);
+      display: grid; place-items: center;
+      color: var(--teal-700);
+      font-weight: 800;
+    }
+    .group-count {
+      background: white;
+      border: 1px solid var(--slate-200);
+      color: var(--slate-500);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 188px;
+      padding: 17px;
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      transition: 0.18s ease;
+      text-decoration: none;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--teal-500), var(--teal-300));
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: var(--teal-100);
+    }
+    .card .meta {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      color: var(--slate-700);
+    }
+    .pill.type-cartilha { background: var(--green-50); color: var(--green-700); border-color: #bbf7d0; }
+    .pill.type-guia { background: var(--blue-50); color: var(--blue-700); border-color: #bfdbfe; }
+    .pill.type-roteiro { background: var(--purple-50); color: var(--purple-700); border-color: #e9d5ff; }
+    .pill.type-colecao { background: var(--amber-50); color: var(--amber-700); border-color: var(--amber-100); }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+    }
+    .card p {
+      margin: 0;
+      color: var(--slate-500);
+      font-size: 0.86rem;
+    }
+    .open {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal-600);
+      font-weight: 800;
+      font-size: 0.86rem;
+      padding-top: 18px;
+    }
+
+    .empty {
+      display: none;
+      text-align: center;
+      background: white;
+      border: 1px dashed var(--slate-200);
+      border-radius: var(--radius);
+      padding: 36px 18px;
+      color: var(--slate-500);
+      margin: 24px 0;
+    }
+
+    footer {
+      color: var(--slate-500);
+      font-size: 0.84rem;
+      border-top: 1px solid var(--slate-200);
+      padding: 22px 0 0;
+      margin-top: 34px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .controls { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { position: static; }
+    }
+    @media (max-width: 620px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 28px; }
+      .stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="brand"><span class="brand-mark">T</span><strong>TelePsiq_IA</strong><span>Repositório Digital</span></div>
+        <h1>Índice dinâmico dos materiais</h1>
+        <p>Materiais organizados por grande grupo para acesso rápido aos HTMLs individuais: cartilhas, guias MFC/APS, roteiros de apoio à discussão clínica no telematriciamento e coleções temáticas.</p>
+      </div>
+      <aside class="hero-panel">
+        <div class="stats">
+          <div class="stat"><strong id="totalStat">0</strong><span>materiais HTML vinculados</span></div>
+          <div class="stat"><strong id="groupsStat">0</strong><span>grandes grupos</span></div>
+          <div class="stat"><strong id="themesStat">0</strong><span>temas/condições</span></div>
+          <div class="stat"><strong>v1</strong><span>versão preliminar</span></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="notice">
+      <strong>⚠️</strong>
+      <div>
+        <strong>Uso previsto:</strong> índice de navegação do protótipo TelePsiq_IA. Os materiais estão em versão preliminar, ainda sujeitos à revisão clínica, institucional e acadêmica. Os roteiros não são escalas nem instrumentos diagnósticos validados.
+      </div>
+    </div>
+
+    <section class="toolbar" aria-label="Ferramentas de navegação">
+      <div class="controls">
+        <input id="searchInput" type="search" placeholder="Buscar por tema, público, lote ou título..." />
+        <select id="themeSelect" aria-label="Filtrar por tema">
+          <option value="">Todos os temas</option>
+        </select>
+        <select id="loteSelect" aria-label="Filtrar por lote">
+          <option value="">Todos os lotes</option>
+        </select>
+      </div>
+      <div class="tabs" id="tabs"></div>
+      <div class="summary-line">
+        <span id="resultSummary">Carregando materiais...</span>
+        <button class="clear-btn" onclick="clearFilters()">Limpar filtros</button>
+      </div>
+    </section>
+
+    <div id="content"></div>
+    <div class="empty" id="emptyState">
+      <h2>Nenhum material encontrado</h2>
+      <p>Ajuste a busca ou limpe os filtros para visualizar todos os itens.</p>
+    </div>
+
+    <footer>
+      <p><strong>TelePsiq_IA</strong> — Protótipo funcional de apoio ao telematriciamento em psiquiatria da infância e adolescência na Atenção Primária à Saúde.</p>
+      <p>Este índice aponta para arquivos HTML já existentes nas pastas dos lotes. Para manter os links funcionando fora deste ambiente, preserve a estrutura de pastas junto com este arquivo.</p>
+    </footer>
+  </main>
+
+  <script>
+    const materials = [
+  {
+    "title": "Comportamento opositor — Cartilha para cuidadores",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Comportamento opositor",
+    "lote": "Lote 1",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote1_comportamento_opositor/TelePsiqIA_cartilha_comportamento_opositor_cuidadores_v1.html"
+  },
+  {
+    "title": "Comportamento opositor — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Comportamento opositor",
+    "lote": "Lote 1",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote1_comportamento_opositor/TelePsiqIA_guia_MFC_comportamento_opositor_v1.html"
+  },
+  {
+    "title": "Comportamento opositor — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Comportamento opositor",
+    "lote": "Lote 1",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote1_comportamento_opositor/TelePsiqIA_roteiro_telematriciamento_comportamento_opositor_v1.html"
+  },
+  {
+    "title": "Coleção — Comportamento opositor",
+    "group": "Coleções temáticas",
+    "theme": "Comportamento opositor",
+    "lote": "Lote 1",
+    "audience": "Repositório",
+    "type": "Coleção",
+    "href": "telepsiqia_lote1_comportamento_opositor/TelePsiqIA_colecao_comportamento_opositor_v1.html"
+  },
+  {
+    "title": "TDAH — Cartilha para famílias",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "TDAH",
+    "lote": "Lote 2",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote2_tdah/TelePsiqIA_cartilha_TDAH_familias_v1.html"
+  },
+  {
+    "title": "TDAH — Cartilha para professores",
+    "group": "Professores/escola",
+    "theme": "TDAH",
+    "lote": "Lote 2",
+    "audience": "Professores/escola",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote2_tdah/TelePsiqIA_cartilha_TDAH_professores_v1.html"
+  },
+  {
+    "title": "TDAH — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "TDAH",
+    "lote": "Lote 2",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote2_tdah/TelePsiqIA_guia_MFC_TDAH_v1.html"
+  },
+  {
+    "title": "TDAH — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "TDAH",
+    "lote": "Lote 2",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote2_tdah/TelePsiqIA_roteiro_telematriciamento_TDAH_v1.html"
+  },
+  {
+    "title": "Coleção — TDAH",
+    "group": "Coleções temáticas",
+    "theme": "TDAH",
+    "lote": "Lote 2",
+    "audience": "Repositório",
+    "type": "Coleção",
+    "href": "telepsiqia_lote2_tdah/TelePsiqIA_colecao_TDAH_v1.html"
+  },
+  {
+    "title": "TEA — Cartilha para famílias",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "TEA",
+    "lote": "Lote 3",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote3_tea/TelePsiqIA_cartilha_TEA_familias_v1.html"
+  },
+  {
+    "title": "TEA — Cartilha para professores",
+    "group": "Professores/escola",
+    "theme": "TEA",
+    "lote": "Lote 3",
+    "audience": "Professores/escola",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote3_tea/TelePsiqIA_cartilha_TEA_professores_v1.html"
+  },
+  {
+    "title": "TEA — Guia de direitos, acessibilidade e adaptações escolares",
+    "group": "Professores/escola",
+    "theme": "TEA",
+    "lote": "Lote 3",
+    "audience": "Famílias/escola/APS",
+    "type": "Guia",
+    "href": "telepsiqia_lote3_tea/TelePsiqIA_guia_direitos_escola_v1.html"
+  },
+  {
+    "title": "TEA e crises — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "TEA",
+    "lote": "Lote 3",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote3_tea/TelePsiqIA_guia_MFC_TEA_crises_v1.html"
+  },
+  {
+    "title": "TEA — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "TEA",
+    "lote": "Lote 3",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote3_tea/TelePsiqIA_roteiro_telematriciamento_TEA_v1.html"
+  },
+  {
+    "title": "Coleção — TEA, crises e escola",
+    "group": "Coleções temáticas",
+    "theme": "TEA",
+    "lote": "Lote 3",
+    "audience": "Repositório",
+    "type": "Coleção",
+    "href": "telepsiqia_lote3_tea/TelePsiqIA_colecao_TEA_v1.html"
+  },
+  {
+    "title": "Ansiedade e autocobrança — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Ansiedade",
+    "lote": "Lote 4",
+    "audience": "Famílias/adolescentes",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_cartilha_ansiedade_criancas_adolescentes_v1.html"
+  },
+  {
+    "title": "Depressão — Cartilha para famílias",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Depressão",
+    "lote": "Lote 4",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_cartilha_depressao_familias_v1.html"
+  },
+  {
+    "title": "Sofrimento emocional intenso e autolesão — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Sofrimento emocional",
+    "lote": "Lote 4",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_cartilha_sofrimento_autolesao_familias_v1.html"
+  },
+  {
+    "title": "Saúde mental na adolescência — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Adolescência",
+    "lote": "Lote 4",
+    "audience": "Adolescentes/famílias",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_cartilha_adolescente_saude_mental_v1.html"
+  },
+  {
+    "title": "Ansiedade — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Ansiedade",
+    "lote": "Lote 4",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_guia_MFC_ansiedade_v1.html"
+  },
+  {
+    "title": "Depressão — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Depressão",
+    "lote": "Lote 4",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_guia_MFC_depressao_v1.html"
+  },
+  {
+    "title": "Ansiedade — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Ansiedade",
+    "lote": "Lote 4",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_roteiro_telematriciamento_ansiedade_v1.html"
+  },
+  {
+    "title": "Depressão — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Depressão",
+    "lote": "Lote 4",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_roteiro_telematriciamento_depressao_v1.html"
+  },
+  {
+    "title": "Sofrimento emocional intenso e risco — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Sofrimento emocional",
+    "lote": "Lote 4",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_roteiro_telematriciamento_sofrimento_emocional_risco_v1.html"
+  },
+  {
+    "title": "Coleção — Sofrimento emocional",
+    "group": "Coleções temáticas",
+    "theme": "Sofrimento emocional",
+    "lote": "Lote 4",
+    "audience": "Repositório",
+    "type": "Coleção",
+    "href": "telepsiqia_lote4_sofrimento_emocional/TelePsiqIA_colecao_sofrimento_emocional_v1.html"
+  },
+  {
+    "title": "Higiene do sono — Cartilha para famílias",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Sono",
+    "lote": "Lote 5",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_cartilha_higiene_sono_familias_v1.html"
+  },
+  {
+    "title": "Higiene do sono — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Sono",
+    "lote": "Lote 5",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_guia_MFC_higiene_sono_v1.html"
+  },
+  {
+    "title": "Sono — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Sono",
+    "lote": "Lote 5",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_roteiro_telematriciamento_sono_v1.html"
+  },
+  {
+    "title": "Telas, saúde digital e rotina familiar — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Telas",
+    "lote": "Lote 5",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_cartilha_telas_familias_v1.html"
+  },
+  {
+    "title": "Telas e saúde digital — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Telas",
+    "lote": "Lote 5",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_guia_MFC_telas_v1.html"
+  },
+  {
+    "title": "Telas — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Telas",
+    "lote": "Lote 5",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_roteiro_telematriciamento_telas_v1.html"
+  },
+  {
+    "title": "Enurese noturna — Cartilha para famílias",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Enurese",
+    "lote": "Lote 5",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_cartilha_enurese_familias_v1.html"
+  },
+  {
+    "title": "Enurese noturna — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Enurese",
+    "lote": "Lote 5",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_guia_MFC_enurese_v1.html"
+  },
+  {
+    "title": "Enurese — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Enurese",
+    "lote": "Lote 5",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_roteiro_telematriciamento_enurese_v1.html"
+  },
+  {
+    "title": "Rotina familiar protetiva — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Rotina",
+    "lote": "Lote 5",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_cartilha_rotina_familiar_v1.html"
+  },
+  {
+    "title": "Rotina — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Rotina",
+    "lote": "Lote 5",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_roteiro_telematriciamento_rotina_v1.html"
+  },
+  {
+    "title": "Coleção — Sono, telas, enurese e rotina",
+    "group": "Coleções temáticas",
+    "theme": "Sono, telas, enurese e rotina",
+    "lote": "Lote 5",
+    "audience": "Repositório",
+    "type": "Coleção",
+    "href": "telepsiqia_lote5_sono_telas_enurese_rotina/TelePsiqIA_colecao_sono_telas_enurese_rotina_v1.html"
+  },
+  {
+    "title": "Altas habilidades/superdotação — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Altas habilidades/superdotação",
+    "lote": "Lote 6 provisório",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_cartilha_altas_habilidades_superdotacao_v1.html"
+  },
+  {
+    "title": "Altas habilidades/superdotação — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Altas habilidades/superdotação",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_guia_MFC_altas_habilidades_superdotacao_v1.html"
+  },
+  {
+    "title": "Altas habilidades/superdotação — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Altas habilidades/superdotação",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_roteiro_telematriciamento_altas_habilidades_superdotacao_v1.html"
+  },
+  {
+    "title": "Bullying e sofrimento escolar — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Bullying e sofrimento escolar",
+    "lote": "Lote 6 provisório",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_cartilha_bullying_sofrimento_escolar_v1.html"
+  },
+  {
+    "title": "Bullying e sofrimento escolar — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Bullying e sofrimento escolar",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_guia_MFC_bullying_sofrimento_escolar_v1.html"
+  },
+  {
+    "title": "Bullying e sofrimento escolar — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Bullying e sofrimento escolar",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_roteiro_telematriciamento_bullying_sofrimento_escolar_v1.html"
+  },
+  {
+    "title": "Queixas escolares e dificuldade de aprendizagem — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Queixas escolares e aprendizagem",
+    "lote": "Lote 6 provisório",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_cartilha_queixas_escolares_dificuldade_aprendizagem_v1.html"
+  },
+  {
+    "title": "Queixas escolares e dificuldade de aprendizagem — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Queixas escolares e aprendizagem",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_guia_MFC_queixas_escolares_aprendizagem_v1.html"
+  },
+  {
+    "title": "Queixas escolares e dificuldade de aprendizagem — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Queixas escolares e aprendizagem",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_roteiro_telematriciamento_queixas_escolares_aprendizagem_v1.html"
+  },
+  {
+    "title": "Crianças pequenas: birras, limites e desenvolvimento — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Crianças pequenas",
+    "lote": "Lote 6 provisório",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_cartilha_criancas_pequenas_birras_limites_desenvolvimento_v1.html"
+  },
+  {
+    "title": "Crianças pequenas: birras, limites e desenvolvimento — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Crianças pequenas",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_guia_MFC_criancas_pequenas_birras_limites_desenvolvimento_v1.html"
+  },
+  {
+    "title": "Crianças pequenas: birras, limites e desenvolvimento — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Crianças pequenas",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_roteiro_telematriciamento_criancas_pequenas_birras_limites_v1.html"
+  },
+  {
+    "title": "Uso de substâncias na adolescência — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Uso de substâncias",
+    "lote": "Lote 6 provisório",
+    "audience": "Adolescentes/famílias",
+    "type": "Cartilha",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_cartilha_uso_substancias_adolescencia_v1.html"
+  },
+  {
+    "title": "Uso de substâncias na adolescência — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Uso de substâncias",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_guia_MFC_uso_substancias_adolescencia_v1.html"
+  },
+  {
+    "title": "Uso de substâncias na adolescência — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Uso de substâncias",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_roteiro_telematriciamento_uso_substancias_adolescencia_v1.html"
+  },
+  {
+    "title": "Irritabilidade intensa e desregulação emocional — Cartilha",
+    "group": "Cartilhas famílias/cuidadores/adolescentes",
+    "theme": "Irritabilidade/desregulação emocional",
+    "lote": "Lote 6 provisório",
+    "audience": "Famílias/cuidadores",
+    "type": "Cartilha",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_cartilha_irritabilidade_desregulacao_emocional_v1.html"
+  },
+  {
+    "title": "Irritabilidade intensa e desregulação emocional — Guia MFC/APS",
+    "group": "Guias MFC/APS",
+    "theme": "Irritabilidade/desregulação emocional",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Guia MFC",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_guia_MFC_irritabilidade_desregulacao_emocional_v1.html"
+  },
+  {
+    "title": "Irritabilidade intensa e desregulação emocional — Roteiro de apoio",
+    "group": "Roteiros de apoio ao telematriciamento",
+    "theme": "Irritabilidade/desregulação emocional",
+    "lote": "Lote 6 provisório",
+    "audience": "MFC/APS",
+    "type": "Roteiro",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_roteiro_telematriciamento_irritabilidade_desregulacao_emocional_v1.html"
+  },
+  {
+    "title": "Coleção — Expansão temática: novos conteúdos",
+    "group": "Coleções temáticas",
+    "theme": "Expansão temática",
+    "lote": "Lote 6 provisório",
+    "audience": "Repositório",
+    "type": "Coleção",
+    "href": "telepsiqia_expansao_tematica_novos_conteudos/TelePsiqIA_colecao_expansao_tematica_novos_conteudos_v1.html"
+  }
+];
+
+    const groupOrder = [
+      "Guias MFC/APS",
+      "Cartilhas famílias/cuidadores/adolescentes",
+      "Professores/escola",
+      "Roteiros de apoio ao telematriciamento",
+      "Coleções temáticas"
+    ];
+
+    const groupIcons = {
+      "Guias MFC/APS": "🩺",
+      "Cartilhas famílias/cuidadores/adolescentes": "🏠",
+      "Professores/escola": "🏫",
+      "Roteiros de apoio ao telematriciamento": "🧭",
+      "Coleções temáticas": "📚"
+    };
+
+    let activeGroup = "Todos";
+
+    const searchInput = document.getElementById("searchInput");
+    const themeSelect = document.getElementById("themeSelect");
+    const loteSelect = document.getElementById("loteSelect");
+    const content = document.getElementById("content");
+    const tabs = document.getElementById("tabs");
+    const summary = document.getElementById("resultSummary");
+    const emptyState = document.getElementById("emptyState");
+
+    function normalize(str) {
+      return (str || "").toString().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    function typeClass(type) {
+      const t = normalize(type);
+      if (t.includes("cartilha")) return "type-cartilha";
+      if (t.includes("roteiro")) return "type-roteiro";
+      if (t.includes("colecao")) return "type-colecao";
+      return "type-guia";
+    }
+
+    function unique(arr) {
+      return [...new Set(arr)].sort((a, b) => a.localeCompare(b, "pt-BR"));
+    }
+
+    function setupFilters() {
+      const groups = ["Todos", ...groupOrder];
+      tabs.innerHTML = groups.map(g => `<button class="tab ${g === activeGroup ? "active" : ""}" onclick="setGroup('${g.replace(/'/g, "\\'")}')">${g === "Todos" ? "Todos" : (groupIcons[g] + " " + g)} <span>(${g === "Todos" ? materials.length : materials.filter(m => m.group === g).length})</span></button>`).join("");
+
+      unique(materials.map(m => m.theme)).forEach(theme => {
+        const opt = document.createElement("option");
+        opt.value = theme;
+        opt.textContent = theme;
+        themeSelect.appendChild(opt);
+      });
+
+      unique(materials.map(m => m.lote)).forEach(lote => {
+        const opt = document.createElement("option");
+        opt.value = lote;
+        opt.textContent = lote;
+        loteSelect.appendChild(opt);
+      });
+
+      document.getElementById("totalStat").textContent = materials.length;
+      document.getElementById("groupsStat").textContent = groupOrder.length;
+      document.getElementById("themesStat").textContent = unique(materials.map(m => m.theme)).length;
+    }
+
+    function setGroup(group) {
+      activeGroup = group;
+      setupTabsOnly();
+      render();
+      window.scrollTo({ top: document.querySelector(".toolbar").offsetTop - 8, behavior: "smooth" });
+    }
+
+    function setupTabsOnly() {
+      const groups = ["Todos", ...groupOrder];
+      tabs.innerHTML = groups.map(g => `<button class="tab ${g === activeGroup ? "active" : ""}" onclick="setGroup('${g.replace(/'/g, "\\'")}')">${g === "Todos" ? "Todos" : (groupIcons[g] + " " + g)} <span>(${g === "Todos" ? materials.length : materials.filter(m => m.group === g).length})</span></button>`).join("");
+    }
+
+    function filteredMaterials() {
+      const q = normalize(searchInput.value);
+      const theme = themeSelect.value;
+      const lote = loteSelect.value;
+
+      return materials.filter(m => {
+        const haystack = normalize([m.title, m.group, m.theme, m.lote, m.audience, m.type].join(" "));
+        const matchesSearch = !q || haystack.includes(q);
+        const matchesTheme = !theme || m.theme === theme;
+        const matchesLote = !lote || m.lote === lote;
+        const matchesGroup = activeGroup === "Todos" || m.group === activeGroup;
+        return matchesSearch && matchesTheme && matchesLote && matchesGroup;
+      });
+    }
+
+    function card(m) {
+      return `
+        <a class="card" href="${m.href}" target="_blank" rel="noopener">
+          <div class="meta">
+            <span class="pill ${typeClass(m.type)}">${m.type}</span>
+            <span class="pill">${m.lote}</span>
+          </div>
+          <h3>${m.title}</h3>
+          <p><strong>Tema:</strong> ${m.theme}<br><strong>Público:</strong> ${m.audience}</p>
+          <span class="open">Abrir HTML individual →</span>
+        </a>
+      `;
+    }
+
+    function render() {
+      const filtered = filteredMaterials();
+      content.innerHTML = "";
+
+      const groupsToRender = activeGroup === "Todos" ? groupOrder : [activeGroup];
+
+      groupsToRender.forEach(group => {
+        const groupItems = filtered.filter(m => m.group === group);
+        if (!groupItems.length) return;
+
+        const section = document.createElement("section");
+        section.className = "group-section";
+        section.innerHTML = `
+          <div class="group-head">
+            <div class="group-title">
+              <div class="group-icon">${groupIcons[group] || "📄"}</div>
+              <h2>${group}</h2>
+            </div>
+            <span class="group-count">${groupItems.length} item(ns)</span>
+          </div>
+          <div class="grid">
+            ${groupItems.map(card).join("")}
+          </div>
+        `;
+        content.appendChild(section);
+      });
+
+      emptyState.style.display = filtered.length ? "none" : "block";
+      summary.textContent = `${filtered.length} de ${materials.length} materiais exibidos`;
+    }
+
+    function clearFilters() {
+      searchInput.value = "";
+      themeSelect.value = "";
+      loteSelect.value = "";
+      activeGroup = "Todos";
+      setupTabsOnly();
+      render();
+    }
+
+    searchInput.addEventListener("input", render);
+    themeSelect.addEventListener("change", render);
+    loteSelect.addEventListener("change", render);
+
+    setupFilters();
+    render();
+  </script>
+</body>
+</html>

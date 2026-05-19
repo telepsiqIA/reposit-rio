@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotina familiar protetiva — TelePsiq_IA</title>
+<style>
+:root{
+  --teal:#0D7A6E;--teal-dark:#074840;--teal-light:#E7F5F2;
+  --amber:#F59E0B;--amber-light:#FFF7ED;
+  --blue:#1d4ed8;--blue-light:#eff6ff;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --red:#B91C1C;--red-light:#FEF2F2;
+  --green:#047857;--green-light:#ecfdf5;
+  --pink:#be185d;--pink-light:#fdf2f8;
+  --text:#374151;--muted:#6B7280;--line:#E5E7EB;--bg:#F9FAFB;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:42px 28px 32px;border-bottom:8px solid #1FA88F}
+.wrap{max-width:980px;margin:0 auto}
+.brand{font-weight:800;font-size:20px;margin-bottom:24px;letter-spacing:.01em}
+.badge{display:inline-block;background:#fff;color:var(--teal-dark);font-weight:700;border-radius:999px;padding:6px 12px;font-size:13px;margin:8px 0 16px}
+h1{font-size:34px;line-height:1.12;margin:0 0 10px}
+.subtitle{font-size:17px;opacity:.95;margin:0 0 10px}.meta{font-size:13px;opacity:.9;margin-top:18px}
+main{max-width:980px;margin:28px auto;padding:0 20px}
+.section{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 24px rgba(7,72,64,.06);break-inside:avoid}
+h2{font-size:22px;line-height:1.25;color:var(--teal-dark);margin:0 0 12px}
+h3{font-size:17px;color:var(--teal-dark);margin:16px 0 8px}
+h4{font-size:15px;color:#111827;margin:12px 0 6px}
+p{margin:8px 0}
+.callout{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--teal-dark);margin:12px 0}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px 16px;margin:18px 0;color:#9a3412}
+.safety{background:#fef2f2;border:1px solid #fecaca;border-left:5px solid #B91C1C;border-radius:14px;padding:14px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff;break-inside:avoid}
+.card.teal{background:var(--teal-light);border-color:#b7e2da}
+.card.blue{background:var(--blue-light);border-color:#bfdbfe}
+.card.amber{background:var(--amber-light);border-color:#fed7aa}
+.card.red{background:var(--red-light);border-color:#fecaca}
+.card.green{background:var(--green-light);border-color:#bbf7d0}
+.card.purple{background:var(--purple-light);border-color:#ddd6fe}
+.card.pink{background:var(--pink-light);border-color:#fbcfe8}
+ul,ol{margin:8px 0 8px 20px;padding:0}
+li{margin:4px 0}
+.checklist{list-style:none;margin-left:0}
+.checklist li{margin:7px 0;padding-left:26px;position:relative}
+.checklist li::before{content:"□";position:absolute;left:0;top:0;color:var(--teal);font-weight:800}
+.small{font-size:13px;color:var(--muted)}
+.table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:12px;overflow:hidden}
+.table th{background:var(--teal-dark);color:#fff;text-align:left;font-size:13px;padding:10px}
+.table td{border:1px solid var(--line);padding:9px;vertical-align:top;font-size:13px}
+.table tr:nth-child(even) td{background:#fbfbfb}
+.footer{font-size:12px;color:#6B7280;border-top:1px solid var(--line);margin:28px auto 0;padding:18px 20px 28px;max-width:980px}
+.refs{font-size:12px;color:#4B5563}
+.pagebreak{page-break-before:always}
+.cover{min-height:92vh;display:flex;align-items:center}
+.cover .hero{width:100%}
+@media print{
+  body{background:#fff}
+  .section{box-shadow:none}
+  @page{size:A4;margin:12mm}
+  .grid,.grid3{gap:10px}
+  .hero{margin:-12mm -12mm 0 -12mm}
+}
+@media(max-width:700px){
+  h1{font-size:28px}
+  .grid,.grid3{grid-template-columns:1fr}
+  .hero{padding:34px 20px 26px}
+  main{padding:0 14px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">TelePsiq<span style="color:#9EEAD8">_IA</span></div>
+    <div class="badge">Cartilha para famílias e cuidadores</div>
+    <h1>Rotina familiar protetiva</h1>
+    <p class="subtitle">Cartilha para famílias e cuidadores: sono, telas, escola, autonomia e convivência.</p>
+    <div class="meta">Lote 5 — Sono, telas, enurese e rotina · Versão 1.0 · 2026</div>
+  </div>
+</header>
+<main>
+
+<div class="notice"><strong>Para famílias e cuidadores.</strong> A rotina não precisa ser perfeita. Ela precisa ser previsível o suficiente para ajudar a criança/adolescente a dormir, estudar, brincar, conviver e se cuidar.</div>
+
+<div class="section">
+<h2>Por que rotina protege saúde mental?</h2>
+<p>Rotinas previsíveis reduzem conflitos, ajudam na autonomia, organizam sono, alimentação, escola, higiene, brincadeiras e uso de telas. Para crianças com TDAH, TEA, ansiedade, dificuldades escolares ou irritabilidade, a previsibilidade pode ser ainda mais importante.</p>
+<div class="callout">Rotina boa é rotina possível: simples, repetida e adaptada à realidade da família.</div>
+</div>
+
+<div class="section">
+<h2>Os 5 pilares da rotina</h2>
+<div class="grid">
+<div class="card teal"><h3>Sono</h3><p>Horário de acordar e dormir, desaceleração noturna e telas fora do quarto.</p></div>
+<div class="card green"><h3>Corpo</h3><p>Alimentação, banho, escovar dentes, atividade física e brincadeira.</p></div>
+<div class="card blue"><h3>Escola</h3><p>Horário para tarefas, mochila, materiais e comunicação com professores.</p></div>
+<div class="card purple"><h3>Vínculos</h3><p>Conversas, refeições, brincadeiras, afeto e tempo de qualidade.</p></div>
+<div class="card amber"><h3>Telas</h3><p>Regras sobre horário, local, duração e conteúdo.</p></div>
+<div class="card pink"><h3>Autonomia</h3><p>Pequenas responsabilidades compatíveis com a idade.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Como começar sem sobrecarregar?</h2>
+<ol>
+<li>Escolha apenas uma rotina para organizar primeiro: manhã, tarefa escolar ou hora de dormir.</li>
+<li>Escreva 3 a 5 passos simples.</li>
+<li>Use combinados visuais quando possível.</li>
+<li>Avise transições: “daqui 10 minutos vamos guardar”.</li>
+<li>Elogie o esforço, não apenas o resultado.</li>
+<li>Revise a rotina após uma semana e ajuste o que não funcionou.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>Exemplo de rotina da noite</h2>
+<table class="table">
+<tr><th>Etapa</th><th>Como fazer</th></tr>
+<tr><td>Desacelerar</td><td>Reduzir agitação, luz forte e telas.</td></tr>
+<tr><td>Organizar o corpo</td><td>Banho, pijama, banheiro, escovar dentes.</td></tr>
+<tr><td>Conexão breve</td><td>História curta, conversa tranquila ou música calma.</td></tr>
+<tr><td>Dormir</td><td>Luz baixa, celular fora do quarto e horário combinado.</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Quando a rotina vira campo de batalha</h2>
+<ul>
+<li>Reduza o número de regras. Muitas regras ao mesmo tempo geram desistência.</li>
+<li>Evite discutir no pico da irritação; retome quando todos estiverem mais calmos.</li>
+<li>Transforme ordens longas em passos curtos.</li>
+<li>Combine consequências previsíveis e proporcionais, sem humilhar.</li>
+<li>Procure apoio se houver sofrimento intenso, agressividade, queda escolar ou exaustão familiar.</li>
+</ul>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Higiene do Sono — Atualização 2021.</li>
+<li>Sociedade Brasileira de Pediatria. Manual de Orientação #MenosTelas #MaisSaúde — Atualização 2024.</li>
+<li>Governo Federal. Crianças, adolescentes e telas: guia sobre usos de dispositivos digitais, 2025.</li>
+<li>World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age, 2019.</li>
+</ul>
+</div>
+
+</main>
+
+<div class="footer">
+  <strong>TelePsiq_IA — Telematriciamento em Psiquiatria da Infância e Adolescência na APS</strong><br>
+  Fundação Pio XII / Hospital de Amor — Barretos-SP · Mestrado Profissional em Inovação em Saúde.<br>
+  Versão preliminar para revisão técnica, clínica e institucional. Material educativo/de apoio, sem finalidade diagnóstica isolada. Não substituir avaliação clínica, prontuário institucional, rede de proteção ou conduta médica individualizada.<br>
+  © 2026 Dra. Bárbara Sgavioli Massucato. Uso educacional com citação.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direitos, acessibilidade e adaptações escolares — TelePsiq_IA</title>
+<style>
+:root{
+  --teal:#0D7A6E;--teal-dark:#074840;--teal-light:#E7F5F2;
+  --amber:#F59E0B;--amber-light:#FFF7ED;
+  --blue:#1d4ed8;--blue-light:#eff6ff;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --red:#B91C1C;--red-light:#FEF2F2;
+  --green:#047857;--green-light:#ecfdf5;
+  --text:#374151;--muted:#6B7280;--line:#E5E7EB;--bg:#F9FAFB;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.52}
+.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:44px 28px 34px;border-bottom:8px solid #1FA88F}
+.wrap{max-width:980px;margin:0 auto}
+.brand{font-weight:800;font-size:20px;margin-bottom:28px;letter-spacing:.01em}
+.badge{display:inline-block;background:#fff;color:var(--teal-dark);font-weight:700;border-radius:999px;padding:6px 12px;font-size:13px;margin:8px 0 16px}
+h1{font-size:34px;line-height:1.12;margin:0 0 10px}
+.subtitle{font-size:17px;opacity:.95;margin:0 0 10px}.meta{font-size:13px;opacity:.9;margin-top:18px}
+main{max-width:980px;margin:28px auto;padding:0 20px}
+.section{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 24px rgba(7,72,64,.06)}
+h2{font-size:22px;line-height:1.25;color:var(--teal-dark);margin:0 0 12px}
+h3{font-size:17px;color:var(--teal-dark);margin:16px 0 8px}
+h4{font-size:15px;color:#111827;margin:12px 0 6px}
+p{margin:8px 0}
+.callout{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--teal-dark);margin:12px 0}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px 16px;margin:18px 0;color:#9a3412}
+.safety{background:#fef2f2;border:1px solid #fecaca;border-left:5px solid #B91C1C;border-radius:14px;padding:14px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff}
+.card.teal{background:var(--teal-light);border-color:#b7e2da}
+.card.blue{background:var(--blue-light);border-color:#bfdbfe}
+.card.amber{background:var(--amber-light);border-color:#fed7aa}
+.card.red{background:var(--red-light);border-color:#fecaca}
+.card.green{background:var(--green-light);border-color:#bbf7d0}
+.card.purple{background:var(--purple-light);border-color:#ddd6fe}
+ul,ol{margin:8px 0 8px 20px;padding:0}
+li{margin:4px 0}
+.checklist{list-style:none;margin-left:0}
+.checklist li{margin:7px 0;padding-left:26px;position:relative}
+.checklist li:before{content:"□";position:absolute;left:0;top:0;color:var(--teal);font-weight:700}
+.steps{counter-reset:step;list-style:none;margin-left:0}
+.steps li{counter-increment:step;margin:10px 0;padding-left:34px;position:relative}
+.steps li:before{content:counter(step);position:absolute;left:0;top:0;background:var(--teal);color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;font-size:12px;font-weight:700}
+table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:14px;overflow:hidden;font-size:14px}
+th{background:var(--teal-dark);color:#fff;text-align:left;padding:10px}
+td{border:1px solid var(--line);padding:10px;vertical-align:top;background:#fff}
+.small{font-size:13px;color:var(--muted)}
+.footer{max-width:980px;margin:28px auto 0;padding:18px 20px 34px;color:#6b7280;font-size:12px;border-top:1px solid var(--line)}
+.ref{font-size:12px;color:#4b5563}
+.pagebreak{page-break-before:always}
+hr.sep{border:none;border-top:1px solid var(--line);margin:18px 0}
+@page{size:A4;margin:14mm 13mm 16mm 13mm}
+@media print{
+  body{background:#fff}
+  .hero{padding:26px 0 22px;margin:-14mm -13mm 10mm -13mm;border-bottom:5px solid #1FA88F}
+  .hero .wrap{padding:0 13mm}
+  main{padding:0;margin:0 auto}
+  .section{box-shadow:none;break-inside:avoid;margin:12px 0;padding:16px 18px}
+  .grid,.grid3{gap:10px}
+  h1{font-size:27px}.subtitle{font-size:14px}.brand{margin-bottom:16px;font-size:16px}
+  .footer{padding:12px 0 0;margin-top:12px}
+}
+@media(max-width:760px){.grid,.grid3{grid-template-columns:1fr}h1{font-size:29px}.hero{padding:34px 22px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">TelePsiq<span style="color:#9FE7DA">_IA</span></div>
+    <div class="badge">Direitos e escola</div>
+    <h1>Direitos, acessibilidade e adaptações escolares</h1>
+    <p class="subtitle">Guia prático para famílias, escola e APS sobre inclusão escolar e organização de solicitações.</p>
+    <p class="meta">Lote 3 — TEA, crises e escola · Versão 1 · Maio/2026</p>
+  </div>
+</header>
+<main>
+
+<section class="section">
+  <h2>Objetivo deste guia</h2>
+  <p>Este guia resume pontos práticos sobre direitos, acessibilidade e adaptações escolares para estudantes com TEA, TDAH, deficiência, transtornos do aprendizado ou outras condições com impacto funcional. Ele pode apoiar famílias, escola e APS na organização da demanda e na comunicação com a rede.</p>
+  <p class="small">O material não substitui avaliação jurídica, parecer pedagógico individualizado ou orientação institucional da secretaria de educação.</p>
+</section>
+
+<section class="section">
+  <h2>Leis brasileiras importantes</h2>
+  <table>
+    <tr><th>Norma</th><th>O que garante em termos gerais</th></tr>
+    <tr><td><strong>Lei nº 12.764/2012</strong><br>Lei Berenice Piana</td><td>Institui a Política Nacional de Proteção dos Direitos da Pessoa com TEA e reconhece a pessoa com TEA como pessoa com deficiência para todos os efeitos legais.</td></tr>
+    <tr><td><strong>Lei nº 13.146/2015</strong><br>Lei Brasileira de Inclusão</td><td>Fortalece o direito à acessibilidade, à educação inclusiva, à participação social, a adaptações razoáveis e à não discriminação.</td></tr>
+    <tr><td><strong>ECA</strong></td><td>Protege direitos de crianças e adolescentes, incluindo educação, saúde, convivência familiar e proteção contra negligência, discriminação e violência.</td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>O que a família pode solicitar à escola?</h2>
+  <ul>
+    <li>Reunião para discutir necessidades do estudante e plano de apoio.</li>
+    <li>Adaptações de rotina, comunicação, avaliação, tempo, ambiente ou material.</li>
+    <li>Atendimento Educacional Especializado, quando disponível e indicado.</li>
+    <li>Profissional de apoio escolar quando houver necessidade funcional para alimentação, higiene, locomoção, comunicação ou segurança, conforme avaliação e rede local.</li>
+    <li>Registro escrito dos combinados e reavaliação periódica das estratégias.</li>
+  </ul>
+  <div class="notice">A necessidade de apoio deve ser pensada a partir da funcionalidade do estudante, não apenas do diagnóstico escrito no laudo.</div>
+</section>
+
+<section class="section">
+  <h2>Adaptações possíveis</h2>
+  <div class="grid">
+    <div class="card teal"><h3>Comunicação</h3><p>Instruções curtas, apoio visual, antecipação de mudanças, checagem de compreensão.</p></div>
+    <div class="card blue"><h3>Ambiente</h3><p>Local de menor estímulo, pausa sensorial, redução de ruído, organização previsível.</p></div>
+    <div class="card green"><h3>Avaliação</h3><p>Mais tempo, divisão da tarefa em partes, forma alternativa de demonstrar aprendizagem.</p></div>
+    <div class="card amber"><h3>Rotina</h3><p>Agenda visual, combinados, transições planejadas e comunicação família-escola.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Como organizar um pedido à escola</h2>
+  <ol class="steps">
+    <li>Descrever a dificuldade funcional observada, com exemplos concretos.</li>
+    <li>Apresentar relatório clínico ou pedagógico, quando houver.</li>
+    <li>Solicitar reunião com coordenação e professores.</li>
+    <li>Definir adaptações realistas e responsáveis por cada ação.</li>
+    <li>Registrar por escrito o que foi combinado.</li>
+    <li>Reavaliar se a estratégia funcionou após algumas semanas.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>Quando envolver a APS ou telematriciamento?</h2>
+  <ul>
+    <li>Quando há dúvida se o comportamento é sobrecarga, sofrimento emocional, condição clínica ou dificuldade pedagógica.</li>
+    <li>Quando escola e família têm percepções muito diferentes.</li>
+    <li>Quando crises estão prejudicando frequência, aprendizagem, segurança ou vínculo escolar.</li>
+    <li>Quando há necessidade de articular saúde, escola, assistência social e rede especializada.</li>
+  </ul>
+</section>
+
+
+<section class="section">
+  <h2>Referências-base consultadas</h2>
+  <p class="ref">Brasil. Lei nº 12.764, de 27 de dezembro de 2012. Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista.</p>
+  <p class="ref">Brasil. Lei nº 13.146, de 6 de julho de 2015. Lei Brasileira de Inclusão da Pessoa com Deficiência.</p>
+  <p class="ref">Ministério da Saúde. Transtorno do Espectro Autista — atenção primária, atenção especializada e linha de cuidado.</p>
+  <p class="ref">American Academy of Pediatrics. Identification, Evaluation, and Management of Children With Autism Spectrum Disorder. Pediatrics, 2020.</p>
+  <p class="ref">Centers for Disease Control and Prevention. Autism Spectrum Disorder: signs, symptoms and developmental monitoring.</p>
+  <p class="ref">NICE. Autism spectrum disorder in under 19s: support and management. Clinical guideline CG170.</p>
+  <p class="small">As referências sustentam a organização educativa e clínica geral do material. A aplicação deve considerar avaliação individual, protocolos locais e rede disponível.</p>
+</section>
+
+</main>
+<footer class="footer">TelePsiq_IA — Telematriciamento em Psiquiatria da Infância e Adolescência na APS<br>
+Fundação Pio XII / Hospital de Amor, Barretos-SP · Produto técnico de mestrado profissional<br>
+Versão preliminar para revisão técnica e institucional · Não substitui avaliação clínica, decisão profissional ou protocolos locais.</footer>
+</body>
+</html>

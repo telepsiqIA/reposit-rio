@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TDAH na escola — TelePsiq_IA</title>
+<style>
+:root{
+  --teal:#0D7A6E;--teal-dark:#074840;--teal-light:#E7F5F2;
+  --amber:#F59E0B;--amber-light:#FFF7ED;
+  --blue:#1d4ed8;--blue-light:#eff6ff;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --red:#B91C1C;--red-light:#FEF2F2;
+  --green:#047857;--green-light:#ecfdf5;
+  --text:#374151;--muted:#6B7280;--line:#E5E7EB;--bg:#F9FAFB;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.52}
+.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:44px 28px 34px;border-bottom:8px solid #1FA88F}
+.wrap{max-width:980px;margin:0 auto}
+.brand{font-weight:800;font-size:20px;margin-bottom:28px;letter-spacing:.01em}
+.badge{display:inline-block;background:#fff;color:var(--teal-dark);font-weight:700;border-radius:999px;padding:6px 12px;font-size:13px;margin:8px 0 16px}
+h1{font-size:34px;line-height:1.12;margin:0 0 10px}
+.subtitle{font-size:17px;opacity:.95;margin:0 0 10px}.meta{font-size:13px;opacity:.9;margin-top:18px}
+main{max-width:980px;margin:28px auto;padding:0 20px}
+.section{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 24px rgba(7,72,64,.06)}
+h2{font-size:22px;line-height:1.25;color:var(--teal-dark);margin:0 0 12px}
+h3{font-size:17px;color:var(--teal-dark);margin:16px 0 8px}
+h4{font-size:15px;color:#111827;margin:12px 0 6px}
+p{margin:8px 0}
+.callout{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--teal-dark);margin:12px 0}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px 16px;margin:18px 0;color:#9a3412}
+.safety{background:#fef2f2;border:1px solid #fecaca;border-left:5px solid #b91c1c;border-radius:14px;padding:14px 16px;color:#7f1d1d;margin:14px 0}
+.info{background:var(--blue-light);border:1px solid #bfdbfe;border-left:5px solid var(--blue);border-radius:14px;padding:14px 16px;color:#1e3a8a;margin:14px 0}
+.ok{background:var(--green-light);border:1px solid #bbf7d0;border-left:5px solid var(--green);border-radius:14px;padding:14px 16px;color:#064e3b;margin:14px 0}
+ul{padding-left:22px;margin:8px 0} li{margin:7px 0}
+ol{padding-left:22px;margin:8px 0} 
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 16px;margin:8px 0}
+.card.teal{background:var(--teal-light);border-color:#b6e3db}
+.card.amber{background:var(--amber-light);border-color:#fed7aa}
+.card.blue{background:var(--blue-light);border-color:#bfdbfe}
+.card.purple{background:var(--purple-light);border-color:#ddd6fe}
+.card.green{background:var(--green-light);border-color:#bbf7d0}
+.small{font-size:13px;color:var(--muted)}
+.table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:14px;overflow:hidden}
+.table th{background:var(--teal-dark);color:#fff;text-align:left;font-size:13px;padding:10px}
+.table td{border:1px solid var(--line);padding:10px;vertical-align:top;background:#fff}
+.checklist{list-style:none;padding-left:0}
+.checklist li{padding-left:26px;position:relative;margin:8px 0}
+.checklist li:before{content:"☐";position:absolute;left:0;color:var(--teal);font-weight:bold}
+.footer{border-top:1px solid var(--line);margin-top:26px;padding:18px 0 26px;color:var(--muted);font-size:12px}
+.refs{font-size:12px;color:var(--muted)}
+.pagebreak{break-before:page;page-break-before:always}
+.keep{break-inside:avoid;page-break-inside:avoid}
+@page{size:A4;margin:15mm 13mm 16mm 13mm;@bottom-right{content:"TelePsiq_IA | " counter(page);font-size:9px;color:#6b7280}}
+@media print{
+  body{background:#fff}
+  main{margin:0 auto;padding:0}
+  .section{box-shadow:none;break-inside:avoid}
+  .hero{padding:32px 20px 24px}
+  h1{font-size:28px}
+  h2{font-size:19px}
+  .grid2,.grid3{display:block}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">TelePsiq<span style="color:#a7f3d0">_IA</span></div>
+    <div class="badge">Cartilha para professores</div>
+    <h1>TDAH na escola</h1>
+    <p class="subtitle">Guia educativo para professores: sinais de atenção, estratégias de sala de aula e comunicação com família e rede de cuidado.</p>
+    <p class="meta">Material educativo · Versão preliminar v1 — Maio/2026 — material para revisão técnica<br>Tema: TDAH e contexto escolar</p>
+  </div>
+</header>
+<main>
+
+<section class="section">
+  <h2>Para quem é este material?</h2>
+  <p>Este guia é direcionado a professores e equipes escolares que acompanham estudantes com suspeita ou diagnóstico de TDAH, ou com dificuldades persistentes de atenção, impulsividade, organização e autorregulação em sala de aula.</p>
+  <div class="notice"><strong>Importante:</strong> o professor não precisa “diagnosticar” TDAH. Seu papel é observar, registrar, adaptar estratégias pedagógicas, dialogar com a família e acionar a rede quando necessário.</div>
+</section>
+
+<section class="section">
+  <h2>O que é TDAH — e o que não é</h2>
+  <div class="grid2">
+    <div class="card teal keep">
+      <h3>O que é</h3>
+      <ul>
+        <li>uma condição do neurodesenvolvimento;</li>
+        <li>pode envolver desatenção, impulsividade, hiperatividade e desorganização;</li>
+        <li>costuma impactar aprendizagem, convivência e autoestima;</li>
+        <li>precisa ser compreendido de forma contextual, incluindo família, escola e saúde.</li>
+      </ul>
+    </div>
+    <div class="card amber keep">
+      <h3>O que não é</h3>
+      <ul>
+        <li>não é sinônimo de “má educação”;</li>
+        <li>não é preguiça ou falta de esforço;</li>
+        <li>não é apenas excesso de tela;</li>
+        <li>não ocorre somente em meninos agitados;</li>
+        <li>não justifica exclusão, humilhação ou desistência pedagógica.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Sinais que merecem atenção na escola</h2>
+  <ul>
+    <li>dificuldade persistente para iniciar e concluir atividades;</li>
+    <li>perda frequente de materiais ou esquecimentos repetidos;</li>
+    <li>grande oscilação de rendimento entre atividades;</li>
+    <li>impulsividade que gera conflitos ou interrupções constantes;</li>
+    <li>dificuldade para esperar, organizar caderno, copiar da lousa ou acompanhar instruções longas;</li>
+    <li>baixa autoestima, desânimo ou frases como “eu sou burro” ou “não consigo”.</li>
+  </ul>
+  <div class="info">Registros simples ajudam muito: atividade, comportamento observado, contexto, frequência, estratégias já tentadas e resposta do estudante.</div>
+</section>
+
+<section class="section">
+  <h2>Estratégias simples para sala de aula</h2>
+  <table class="table">
+    <tr><th>Dificuldade observada</th><th>Estratégia pedagógica possível</th></tr>
+    <tr><td>Perde o foco rapidamente</td><td>Dividir instruções em etapas curtas, checar compreensão e combinar sinal discreto para retorno à tarefa.</td></tr>
+    <tr><td>Não conclui atividades</td><td>Reduzir a quantidade sem reduzir o objetivo pedagógico, priorizar itens essenciais e usar metas por blocos.</td></tr>
+    <tr><td>Impulsividade</td><td>Estabelecer combinados claros, reforçar quando espera a vez e antecipar momentos de maior exigência.</td></tr>
+    <tr><td>Desorganização</td><td>Usar rotina visual, checklist de materiais, cores por disciplina e agenda conferida com apoio.</td></tr>
+    <tr><td>Baixa autoestima</td><td>Valorizar progresso específico, evitar exposição pública do erro e oferecer oportunidades de sucesso.</td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Frases que ajudam</h2>
+  <ul>
+    <li>“Vou repetir em duas etapas.”</li>
+    <li>“Comece pelo item 1; depois eu volto para conferir.”</li>
+    <li>“Percebi que você conseguiu voltar para a tarefa.”</li>
+    <li>“Vamos combinar um sinal discreto quando você se distrair.”</li>
+    <li>“Você não precisa fazer tudo de uma vez; vamos organizar por partes.”</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>O que evitar</h2>
+  <ul>
+    <li>chamar o estudante de preguiçoso, mal-educado, sem limites ou desinteressado;</li>
+    <li>expor erros ou dificuldades diante da turma;</li>
+    <li>punir todo movimento corporal sem oferecer alternativa;</li>
+    <li>retirar sistematicamente recreio, convivência ou atividades positivas como única estratégia;</li>
+    <li>atribuir todos os comportamentos ao TDAH sem investigar contexto, sono, ansiedade, aprendizagem, conflitos ou ambiente.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Quando acionar família, APS ou rede de apoio?</h2>
+  <ul>
+    <li>Quando há prejuízo escolar persistente apesar de adaptações simples.</li>
+    <li>Quando há sofrimento emocional, isolamento, conflitos frequentes ou queda importante de rendimento.</li>
+    <li>Quando a escola observa dificuldades em diferentes disciplinas e momentos.</li>
+    <li>Quando há suspeita de dificuldade de aprendizagem, ansiedade, depressão, TEA ou problemas de sono.</li>
+    <li>Quando há risco, violência, negligência ou violação de direitos.</li>
+  </ul>
+  <div class="ok">A Lei nº 14.254/2021 prevê acompanhamento integral para educandos com TDAH, dislexia ou outro transtorno de aprendizagem, incluindo identificação precoce, apoio educacional e articulação intersetorial.</div>
+</section>
+
+<section class="section">
+  <h2>Referências de apoio</h2>
+  
+<ul class="refs">
+  <li>American Psychiatric Association. <em>DSM-5-TR: Manual Diagnóstico e Estatístico de Transtornos Mentais</em>. 2022.</li>
+  <li>Wolraich ML et al. Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents. <em>Pediatrics</em>. 2019.</li>
+  <li>National Institute for Health and Care Excellence (NICE). <em>Attention deficit hyperactivity disorder: diagnosis and management</em>. NG87.</li>
+  <li>Centers for Disease Control and Prevention (CDC). ADHD: diagnosis, treatment, parent training and classroom strategies.</li>
+  <li>Brasil. Lei nº 14.254, de 30 de novembro de 2021.</li>
+  <li>Brasil. Lei nº 13.146, de 6 de julho de 2015 — Lei Brasileira de Inclusão da Pessoa com Deficiência.</li>
+</ul>
+
+</section>
+
+<footer class="footer">
+  <p><strong>Dra. Bárbara Sgavioli Massucato</strong><br>
+  Médica Psiquiatra | Psiquiatra da Infância e Adolescência | CRM-SP 193.099 | RQE 91313</p>
+  <p>TelePsiq_IA — Telematriciamento em Psiquiatria da Infância e Adolescência | Fundação Pio XII / Hospital de Amor, Barretos-SP</p>
+  <p>CC BY-NC-ND 4.0 — Uso educacional com citação. Proibida alteração ou uso comercial. Lei nº 9.610/1998.</p>
+</footer>
+</main>
+</body>
+</html>

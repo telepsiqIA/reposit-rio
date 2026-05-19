@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TDAH na consulta da APS — TelePsiq_IA</title>
+<style>
+:root{
+  --teal:#0D7A6E;--teal-dark:#074840;--teal-light:#E7F5F2;
+  --amber:#F59E0B;--amber-light:#FFF7ED;
+  --blue:#1d4ed8;--blue-light:#eff6ff;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --red:#B91C1C;--red-light:#FEF2F2;
+  --green:#047857;--green-light:#ecfdf5;
+  --text:#374151;--muted:#6B7280;--line:#E5E7EB;--bg:#F9FAFB;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.52}
+.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:44px 28px 34px;border-bottom:8px solid #1FA88F}
+.wrap{max-width:980px;margin:0 auto}
+.brand{font-weight:800;font-size:20px;margin-bottom:28px;letter-spacing:.01em}
+.badge{display:inline-block;background:#fff;color:var(--teal-dark);font-weight:700;border-radius:999px;padding:6px 12px;font-size:13px;margin:8px 0 16px}
+h1{font-size:34px;line-height:1.12;margin:0 0 10px}
+.subtitle{font-size:17px;opacity:.95;margin:0 0 10px}.meta{font-size:13px;opacity:.9;margin-top:18px}
+main{max-width:980px;margin:28px auto;padding:0 20px}
+.section{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 24px rgba(7,72,64,.06)}
+h2{font-size:22px;line-height:1.25;color:var(--teal-dark);margin:0 0 12px}
+h3{font-size:17px;color:var(--teal-dark);margin:16px 0 8px}
+h4{font-size:15px;color:#111827;margin:12px 0 6px}
+p{margin:8px 0}
+.callout{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--teal-dark);margin:12px 0}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px 16px;margin:18px 0;color:#9a3412}
+.safety{background:#fef2f2;border:1px solid #fecaca;border-left:5px solid #b91c1c;border-radius:14px;padding:14px 16px;color:#7f1d1d;margin:14px 0}
+.info{background:var(--blue-light);border:1px solid #bfdbfe;border-left:5px solid var(--blue);border-radius:14px;padding:14px 16px;color:#1e3a8a;margin:14px 0}
+.ok{background:var(--green-light);border:1px solid #bbf7d0;border-left:5px solid var(--green);border-radius:14px;padding:14px 16px;color:#064e3b;margin:14px 0}
+ul{padding-left:22px;margin:8px 0} li{margin:7px 0}
+ol{padding-left:22px;margin:8px 0} 
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 16px;margin:8px 0}
+.card.teal{background:var(--teal-light);border-color:#b6e3db}
+.card.amber{background:var(--amber-light);border-color:#fed7aa}
+.card.blue{background:var(--blue-light);border-color:#bfdbfe}
+.card.purple{background:var(--purple-light);border-color:#ddd6fe}
+.card.green{background:var(--green-light);border-color:#bbf7d0}
+.small{font-size:13px;color:var(--muted)}
+.table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:14px;overflow:hidden}
+.table th{background:var(--teal-dark);color:#fff;text-align:left;font-size:13px;padding:10px}
+.table td{border:1px solid var(--line);padding:10px;vertical-align:top;background:#fff}
+.checklist{list-style:none;padding-left:0}
+.checklist li{padding-left:26px;position:relative;margin:8px 0}
+.checklist li:before{content:"☐";position:absolute;left:0;color:var(--teal);font-weight:bold}
+.footer{border-top:1px solid var(--line);margin-top:26px;padding:18px 0 26px;color:var(--muted);font-size:12px}
+.refs{font-size:12px;color:var(--muted)}
+.pagebreak{break-before:page;page-break-before:always}
+.keep{break-inside:avoid;page-break-inside:avoid}
+@page{size:A4;margin:15mm 13mm 16mm 13mm;@bottom-right{content:"TelePsiq_IA | " counter(page);font-size:9px;color:#6b7280}}
+@media print{
+  body{background:#fff}
+  main{margin:0 auto;padding:0}
+  .section{box-shadow:none;break-inside:avoid}
+  .hero{padding:32px 20px 24px}
+  h1{font-size:28px}
+  h2{font-size:19px}
+  .grid2,.grid3{display:block}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">TelePsiq<span style="color:#a7f3d0">_IA</span></div>
+    <div class="badge">Guia técnico MFC/APS</div>
+    <h1>TDAH na consulta da APS</h1>
+    <p class="subtitle">Guia técnico para MFC/APS: avaliação inicial, diferenciais, manejo compartilhado e critérios para discussão em telematriciamento.</p>
+    <p class="meta">Guia técnico · Versão preliminar v1 — Maio/2026 — material para revisão técnica<br>Tema: TDAH na Atenção Primária à Saúde</p>
+  </div>
+</header>
+<main>
+
+<section class="section">
+  <h2>Objetivo do guia</h2>
+  <p>Apoiar médicos de família e comunidade e equipes da APS na avaliação inicial, organização da demanda, orientação familiar/escolar e decisão sobre discussão em telematriciamento de casos com suspeita ou diagnóstico de TDAH.</p>
+  <div class="notice"><strong>Limite do material:</strong> este guia não substitui avaliação clínica, protocolos locais, supervisão, regulação, cuidado especializado quando indicado ou registro no prontuário institucional.</div>
+</section>
+
+<section class="section">
+  <h2>Quando pensar em TDAH na APS?</h2>
+  <p>O TDAH deve ser considerado quando há padrão persistente de desatenção e/ou hiperatividade-impulsividade, com início no desenvolvimento, presença em mais de um contexto e prejuízo funcional. A hipótese não deve se basear apenas em agitação isolada ou queixa escolar inespecífica.</p>
+  <div class="grid2">
+    <div class="card teal keep">
+      <h3>Informações essenciais</h3>
+      <ul>
+        <li>idade atual e idade aproximada de início dos sintomas;</li>
+        <li>ambientes em que ocorre: casa, escola, comunidade;</li>
+        <li>prejuízo acadêmico, familiar, social e emocional;</li>
+        <li>relato de família e escola;</li>
+        <li>história de desenvolvimento e aprendizagem;</li>
+        <li>sono, rotina, telas e contexto psicossocial.</li>
+      </ul>
+    </div>
+    <div class="card amber keep">
+      <h3>Evitar conclusões rápidas</h3>
+      <ul>
+        <li>não fechar hipótese apenas por indisciplina em sala;</li>
+        <li>não atribuir toda dificuldade ao uso de telas;</li>
+        <li>não ignorar ansiedade, depressão, TEA, trauma, sono ou aprendizagem;</li>
+        <li>não usar escala como diagnóstico isolado.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Avaliação clínica inicial</h2>
+  <table class="table">
+    <tr><th>Dimensão</th><th>Perguntas úteis</th></tr>
+    <tr><td><strong>Atenção e organização</strong></td><td>Perde materiais? Esquece tarefas? Tem dificuldade de iniciar/concluir? Precisa de muita supervisão?</td></tr>
+    <tr><td><strong>Impulsividade e atividade motora</strong></td><td>Interrompe? Age sem pensar? Tem dificuldade de esperar? Levanta-se em situações inadequadas?</td></tr>
+    <tr><td><strong>Prejuízo</strong></td><td>Há queda escolar, conflitos, baixa autoestima, sofrimento familiar ou risco de exclusão escolar?</td></tr>
+    <tr><td><strong>Ambientes</strong></td><td>Acontece em casa e na escola? Ou apenas em uma relação/contexto específico?</td></tr>
+    <tr><td><strong>Desenvolvimento e comorbidades</strong></td><td>Há sinais de TEA, ansiedade, depressão, dificuldade de aprendizagem, tiques, epilepsia, uso de substâncias ou transtorno do sono?</td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Escalas e instrumentos de apoio</h2>
+  <p>Escalas como SNAP-IV, Vanderbilt ou Conners podem ajudar a organizar informações de pais e professores, mas não substituem entrevista clínica, avaliação longitudinal e análise de prejuízo funcional.</p>
+  <div class="info">No contexto TelePsiq_IA, utilizar escalas existentes apenas como apoio. Não apresentar roteiros locais como instrumentos validados.</div>
+</section>
+
+<section class="section">
+  <h2>Diagnósticos diferenciais e condições associadas</h2>
+  <div class="grid2">
+    <div class="card blue keep">
+      <h3>Diferenciais frequentes</h3>
+      <ul>
+        <li>privação de sono ou rotina irregular;</li>
+        <li>ansiedade;</li>
+        <li>depressão ou irritabilidade persistente;</li>
+        <li>dificuldade de aprendizagem;</li>
+        <li>TEA;</li>
+        <li>problemas auditivos/visuais;</li>
+        <li>situações de violência, negligência ou estresse psicossocial.</li>
+      </ul>
+    </div>
+    <div class="card purple keep">
+      <h3>Associações comuns</h3>
+      <ul>
+        <li>comportamento opositor;</li>
+        <li>dificuldades escolares;</li>
+        <li>baixa autoestima;</li>
+        <li>conflitos familiares;</li>
+        <li>ansiedade e alterações de humor;</li>
+        <li>problemas de sono;</li>
+        <li>uso problemático de telas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Manejo inicial possível na APS</h2>
+  <ul>
+    <li>psicoeducar família e escola sobre TDAH e funções executivas;</li>
+    <li>orientar rotina visual, previsibilidade, sono, atividade física e redução de distrações;</li>
+    <li>estimular intervenções comportamentais e parentais;</li>
+    <li>solicitar devolutiva escolar objetiva, evitando rótulos;</li>
+    <li>investigar e manejar condições associadas dentro da competência da APS;</li>
+    <li>discutir em telematriciamento quando houver dúvida diagnóstica, comorbidades, prejuízo relevante ou necessidade de plano compartilhado.</li>
+  </ul>
+  <div class="notice">Questões de medicação devem seguir avaliação individual, protocolos locais, disponibilidade da rede e discussão especializada quando necessário. Este guia não apresenta prescrição nem doses.</div>
+</section>
+
+<section class="section">
+  <h2>Quando discutir no telematriciamento?</h2>
+  <ul>
+    <li>suspeita de TDAH com prejuízo importante e dúvida de manejo;</li>
+    <li>queixa escolar persistente sem clareza diagnóstica;</li>
+    <li>presença de ansiedade, depressão, TEA, comportamento opositor, tiques, crises familiares ou problemas de sono;</li>
+    <li>necessidade de orientar família/escola com plano coordenado;</li>
+    <li>dúvida sobre encaminhamento, prioridade ou cuidado compartilhado;</li>
+    <li>casos em que a equipe deseja discutir riscos, comorbidades ou limites de atuação da APS.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Sinais de maior gravidade</h2>
+  <ul>
+    <li>sofrimento emocional intenso, isolamento, queda abrupta de funcionamento ou autoimagem muito negativa;</li>
+    <li>agressividade grave ou risco à segurança;</li>
+    <li>suspeita de violência, negligência ou violação de direitos;</li>
+    <li>uso de substâncias em adolescente;</li>
+    <li>comorbidade psiquiátrica importante ou instabilidade familiar intensa;</li>
+    <li>prejuízo escolar severo, evasão ou risco de exclusão.</li>
+  </ul>
+  <div class="safety">Situações de risco devem seguir fluxos assistenciais e de proteção do território, sem aguardar apenas a discussão de rotina.</div>
+</section>
+
+<section class="section">
+  <h2>Referências de apoio</h2>
+  
+<ul class="refs">
+  <li>American Psychiatric Association. <em>DSM-5-TR: Manual Diagnóstico e Estatístico de Transtornos Mentais</em>. 2022.</li>
+  <li>Wolraich ML et al. Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents. <em>Pediatrics</em>. 2019.</li>
+  <li>National Institute for Health and Care Excellence (NICE). <em>Attention deficit hyperactivity disorder: diagnosis and management</em>. NG87.</li>
+  <li>Centers for Disease Control and Prevention (CDC). ADHD: diagnosis, treatment, parent training and classroom strategies.</li>
+  <li>Brasil. Lei nº 14.254, de 30 de novembro de 2021.</li>
+  <li>Brasil. Lei nº 13.146, de 6 de julho de 2015 — Lei Brasileira de Inclusão da Pessoa com Deficiência.</li>
+</ul>
+
+</section>
+
+<footer class="footer">
+  <p><strong>Dra. Bárbara Sgavioli Massucato</strong><br>
+  Médica Psiquiatra | Psiquiatra da Infância e Adolescência | CRM-SP 193.099 | RQE 91313</p>
+  <p>TelePsiq_IA — Telematriciamento em Psiquiatria da Infância e Adolescência | Fundação Pio XII / Hospital de Amor, Barretos-SP</p>
+  <p>CC BY-NC-ND 4.0 — Uso educacional com citação. Proibida alteração ou uso comercial. Lei nº 9.610/1998.</p>
+</footer>
+</main>
+</body>
+</html>

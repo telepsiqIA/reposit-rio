@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEA, sobrecarga e crises em casa — TelePsiq_IA</title>
+<style>
+:root{
+  --teal:#0D7A6E;--teal-dark:#074840;--teal-light:#E7F5F2;
+  --amber:#F59E0B;--amber-light:#FFF7ED;
+  --blue:#1d4ed8;--blue-light:#eff6ff;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --red:#B91C1C;--red-light:#FEF2F2;
+  --green:#047857;--green-light:#ecfdf5;
+  --text:#374151;--muted:#6B7280;--line:#E5E7EB;--bg:#F9FAFB;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.52}
+.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:44px 28px 34px;border-bottom:8px solid #1FA88F}
+.wrap{max-width:980px;margin:0 auto}
+.brand{font-weight:800;font-size:20px;margin-bottom:28px;letter-spacing:.01em}
+.badge{display:inline-block;background:#fff;color:var(--teal-dark);font-weight:700;border-radius:999px;padding:6px 12px;font-size:13px;margin:8px 0 16px}
+h1{font-size:34px;line-height:1.12;margin:0 0 10px}
+.subtitle{font-size:17px;opacity:.95;margin:0 0 10px}.meta{font-size:13px;opacity:.9;margin-top:18px}
+main{max-width:980px;margin:28px auto;padding:0 20px}
+.section{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 24px rgba(7,72,64,.06)}
+h2{font-size:22px;line-height:1.25;color:var(--teal-dark);margin:0 0 12px}
+h3{font-size:17px;color:var(--teal-dark);margin:16px 0 8px}
+h4{font-size:15px;color:#111827;margin:12px 0 6px}
+p{margin:8px 0}
+.callout{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--teal-dark);margin:12px 0}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px 16px;margin:18px 0;color:#9a3412}
+.safety{background:#fef2f2;border:1px solid #fecaca;border-left:5px solid #B91C1C;border-radius:14px;padding:14px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff}
+.card.teal{background:var(--teal-light);border-color:#b7e2da}
+.card.blue{background:var(--blue-light);border-color:#bfdbfe}
+.card.amber{background:var(--amber-light);border-color:#fed7aa}
+.card.red{background:var(--red-light);border-color:#fecaca}
+.card.green{background:var(--green-light);border-color:#bbf7d0}
+.card.purple{background:var(--purple-light);border-color:#ddd6fe}
+ul,ol{margin:8px 0 8px 20px;padding:0}
+li{margin:4px 0}
+.checklist{list-style:none;margin-left:0}
+.checklist li{margin:7px 0;padding-left:26px;position:relative}
+.checklist li:before{content:"□";position:absolute;left:0;top:0;color:var(--teal);font-weight:700}
+.steps{counter-reset:step;list-style:none;margin-left:0}
+.steps li{counter-increment:step;margin:10px 0;padding-left:34px;position:relative}
+.steps li:before{content:counter(step);position:absolute;left:0;top:0;background:var(--teal);color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;font-size:12px;font-weight:700}
+table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:14px;overflow:hidden;font-size:14px}
+th{background:var(--teal-dark);color:#fff;text-align:left;padding:10px}
+td{border:1px solid var(--line);padding:10px;vertical-align:top;background:#fff}
+.small{font-size:13px;color:var(--muted)}
+.footer{max-width:980px;margin:28px auto 0;padding:18px 20px 34px;color:#6b7280;font-size:12px;border-top:1px solid var(--line)}
+.ref{font-size:12px;color:#4b5563}
+.pagebreak{page-break-before:always}
+hr.sep{border:none;border-top:1px solid var(--line);margin:18px 0}
+@page{size:A4;margin:14mm 13mm 16mm 13mm}
+@media print{
+  body{background:#fff}
+  .hero{padding:26px 0 22px;margin:-14mm -13mm 10mm -13mm;border-bottom:5px solid #1FA88F}
+  .hero .wrap{padding:0 13mm}
+  main{padding:0;margin:0 auto}
+  .section{box-shadow:none;break-inside:avoid;margin:12px 0;padding:16px 18px}
+  .grid,.grid3{gap:10px}
+  h1{font-size:27px}.subtitle{font-size:14px}.brand{margin-bottom:16px;font-size:16px}
+  .footer{padding:12px 0 0;margin-top:12px}
+}
+@media(max-width:760px){.grid,.grid3{grid-template-columns:1fr}h1{font-size:29px}.hero{padding:34px 22px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">TelePsiq<span style="color:#9FE7DA">_IA</span></div>
+    <div class="badge">Cartilha para famílias e cuidadores</div>
+    <h1>TEA, sobrecarga e crises em casa</h1>
+    <p class="subtitle">Cartilha para famílias e cuidadores: meltdown, shutdown, gatilhos sensoriais, manejo seguro e quando buscar ajuda.</p>
+    <p class="meta">Lote 3 — TEA, crises e escola · Versão 1 · Maio/2026</p>
+  </div>
+</header>
+<main>
+
+<section class="section">
+  <h2>Para que serve esta cartilha?</h2>
+  <p>Esta cartilha foi feita para famílias e cuidadores de crianças e adolescentes com diagnóstico ou suspeita de Transtorno do Espectro Autista (TEA), especialmente quando aparecem momentos de sobrecarga, crise, recolhimento ou dificuldade de comunicação.</p>
+  <div class="callout">A criança ou adolescente autista não “faz crise para manipular”. Muitas vezes, o comportamento é uma forma de comunicar sobrecarga, dor, medo, cansaço, frustração ou dificuldade de adaptação ao ambiente.</div>
+  <p class="small">Este material é educativo. Não substitui avaliação profissional, diagnóstico ou plano terapêutico individualizado.</p>
+</section>
+
+<section class="section">
+  <h2>Meltdown, shutdown e birra: diferenças importantes</h2>
+  <div class="grid">
+    <div class="card red"><h3>Meltdown</h3><p>É uma explosão de sobrecarga. Pode envolver choro intenso, gritos, fuga, agitação, agressividade ou desorganização. A criança/adolescente perde a capacidade de se regular naquele momento.</p><p><strong>O foco é reduzir estímulos e proteger.</strong></p></div>
+    <div class="card blue"><h3>Shutdown</h3><p>É um recolhimento por sobrecarga. A pessoa pode parar de responder, ficar imóvel, silenciosa, distante ou procurar um canto. Não é “manha” nem desobediência.</p><p><strong>O foco é oferecer presença calma e ambiente seguro.</strong></p></div>
+    <div class="card amber"><h3>Birra ou reação à frustração</h3><p>Pode acontecer em qualquer criança, diante de limite ou negativa. Ainda assim, em crianças autistas, frustrações podem rapidamente se somar à sobrecarga sensorial e virar crise real.</p><p><strong>O foco é manter limite com acolhimento.</strong></p></div>
+    <div class="card green"><h3>Crise de saúde</h3><p>Algumas situações parecem crise comportamental, mas podem envolver dor, febre, constipação, sono ruim, fome, efeitos de medicamentos, ansiedade intensa ou eventos neurológicos.</p><p><strong>O foco é avaliar segurança e necessidade de cuidado médico.</strong></p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Gatilhos comuns de sobrecarga</h2>
+  <ul>
+    <li>Ambientes barulhentos, cheiros fortes, luz intensa, excesso de pessoas ou toque inesperado.</li>
+    <li>Mudança de rotina, espera prolongada, transições rápidas ou falta de previsibilidade.</li>
+    <li>Dificuldade para comunicar dor, fome, medo, cansaço ou necessidade de pausa.</li>
+    <li>Exigências acima da capacidade do momento, especialmente em dias de sono ruim ou estresse acumulado.</li>
+    <li>Conflitos, broncas longas, exposição pública ou muitas pessoas falando ao mesmo tempo.</li>
+  </ul>
+  <div class="notice"><strong>Dica prática:</strong> depois que a crise passar, tente identificar o que aconteceu antes. O objetivo não é culpar ninguém, mas reconhecer padrões para prevenir novas sobrecargas.</div>
+</section>
+
+<section class="section">
+  <h2>O que fazer durante uma crise</h2>
+  <ol class="steps">
+    <li><strong>Reduza estímulos:</strong> diminua barulho, luz, fala e circulação de pessoas.</li>
+    <li><strong>Use frases curtas:</strong> “estou aqui”, “você está seguro”, “vamos respirar”, “vamos para um lugar calmo”.</li>
+    <li><strong>Garanta segurança:</strong> afaste objetos que possam machucar e mantenha uma distância protetora.</li>
+    <li><strong>Não dispute controle:</strong> durante a crise, longas explicações e broncas tendem a piorar a sobrecarga.</li>
+    <li><strong>Ofereça pausa:</strong> água, canto tranquilo, objeto de conforto, abafador, rotina visual ou estratégia já combinada.</li>
+    <li><strong>Retome depois:</strong> combine o que fazer em outra situação somente quando todos estiverem mais calmos.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>O que evitar</h2>
+  <div class="grid">
+    <div class="card red"><h3>Evite punição durante a crise</h3><p>Gritar, ameaçar, envergonhar ou punir no auge da crise costuma aumentar a desorganização e dificultar o vínculo.</p></div>
+    <div class="card red"><h3>Evite muitas ordens ao mesmo tempo</h3><p>Em sobrecarga, a criança pode não conseguir processar frases longas ou múltiplas instruções.</p></div>
+    <div class="card red"><h3>Evite plateia</h3><p>Muitas pessoas olhando, comentando ou tentando ajudar ao mesmo tempo podem aumentar a crise.</p></div>
+    <div class="card red"><h3>Evite interpretar como falta de caráter</h3><p>Crise não define a criança. O comportamento precisa ser compreendido dentro do contexto.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Depois da crise: reparar, aprender e prevenir</h2>
+  <ul>
+    <li>Espere a criança/adolescente se regular antes de conversar.</li>
+    <li>Valide o sofrimento: “foi difícil para você”.</li>
+    <li>Nomeie o que aconteceu de forma simples, sem humilhação.</li>
+    <li>Retome combinados possíveis: “na próxima vez, vamos tentar pedir pausa”.</li>
+    <li>Registre gatilhos, sinais precoces e estratégias que funcionaram.</li>
+    <li>Compartilhe com escola e equipe de saúde o que ajuda a prevenir crises.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Quando buscar ajuda profissional com mais urgência?</h2>
+  <div class="safety">
+    <p>Procure a UBS, serviço de referência, urgência ou rede de proteção conforme a gravidade quando houver risco imediato, lesões, perda de consciência, suspeita de crise epiléptica, piora súbita, regressão importante, sofrimento intenso, violência, negligência ou impossibilidade da família manter segurança em casa.</p>
+  </div>
+  <p>Na APS, a equipe pode ajudar a organizar a demanda, avaliar condições associadas, articular escola e rede de cuidado e discutir o caso em telematriciamento quando necessário.</p>
+</section>
+
+
+<section class="section">
+  <h2>Referências-base consultadas</h2>
+  <p class="ref">Brasil. Lei nº 12.764, de 27 de dezembro de 2012. Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista.</p>
+  <p class="ref">Brasil. Lei nº 13.146, de 6 de julho de 2015. Lei Brasileira de Inclusão da Pessoa com Deficiência.</p>
+  <p class="ref">Ministério da Saúde. Transtorno do Espectro Autista — atenção primária, atenção especializada e linha de cuidado.</p>
+  <p class="ref">American Academy of Pediatrics. Identification, Evaluation, and Management of Children With Autism Spectrum Disorder. Pediatrics, 2020.</p>
+  <p class="ref">Centers for Disease Control and Prevention. Autism Spectrum Disorder: signs, symptoms and developmental monitoring.</p>
+  <p class="ref">NICE. Autism spectrum disorder in under 19s: support and management. Clinical guideline CG170.</p>
+  <p class="small">As referências sustentam a organização educativa e clínica geral do material. A aplicação deve considerar avaliação individual, protocolos locais e rede disponível.</p>
+</section>
+
+</main>
+<footer class="footer">TelePsiq_IA — Telematriciamento em Psiquiatria da Infância e Adolescência na APS<br>
+Fundação Pio XII / Hospital de Amor, Barretos-SP · Produto técnico de mestrado profissional<br>
+Versão preliminar para revisão técnica e institucional · Não substitui avaliação clínica, decisão profissional ou protocolos locais.</footer>
+</body>
+</html>

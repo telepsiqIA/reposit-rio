@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coleção Sono, Telas, Enurese e Rotina — TelePsiq_IA</title><style>
+:root{
+  --teal:#0D7A6E;--teal-dark:#074840;--teal-light:#E7F5F2;
+  --amber:#F59E0B;--amber-light:#FFF7ED;
+  --blue:#1d4ed8;--blue-light:#eff6ff;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --red:#B91C1C;--red-light:#FEF2F2;
+  --green:#047857;--green-light:#ecfdf5;
+  --pink:#be185d;--pink-light:#fdf2f8;
+  --text:#374151;--muted:#6B7280;--line:#E5E7EB;--bg:#F9FAFB;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:42px 28px 32px;border-bottom:8px solid #1FA88F}
+.wrap{max-width:980px;margin:0 auto}
+.brand{font-weight:800;font-size:20px;margin-bottom:24px;letter-spacing:.01em}
+.badge{display:inline-block;background:#fff;color:var(--teal-dark);font-weight:700;border-radius:999px;padding:6px 12px;font-size:13px;margin:8px 0 16px}
+h1{font-size:34px;line-height:1.12;margin:0 0 10px}
+.subtitle{font-size:17px;opacity:.95;margin:0 0 10px}.meta{font-size:13px;opacity:.9;margin-top:18px}
+main{max-width:980px;margin:28px auto;padding:0 20px}
+.section{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 24px rgba(7,72,64,.06);break-inside:avoid}
+h2{font-size:22px;line-height:1.25;color:var(--teal-dark);margin:0 0 12px}
+h3{font-size:17px;color:var(--teal-dark);margin:16px 0 8px}
+h4{font-size:15px;color:#111827;margin:12px 0 6px}
+p{margin:8px 0}
+.callout{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--teal-dark);margin:12px 0}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px 16px;margin:18px 0;color:#9a3412}
+.safety{background:#fef2f2;border:1px solid #fecaca;border-left:5px solid #B91C1C;border-radius:14px;padding:14px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff;break-inside:avoid}
+.card.teal{background:var(--teal-light);border-color:#b7e2da}
+.card.blue{background:var(--blue-light);border-color:#bfdbfe}
+.card.amber{background:var(--amber-light);border-color:#fed7aa}
+.card.red{background:var(--red-light);border-color:#fecaca}
+.card.green{background:var(--green-light);border-color:#bbf7d0}
+.card.purple{background:var(--purple-light);border-color:#ddd6fe}
+.card.pink{background:var(--pink-light);border-color:#fbcfe8}
+ul,ol{margin:8px 0 8px 20px;padding:0}
+li{margin:4px 0}
+.checklist{list-style:none;margin-left:0}
+.checklist li{margin:7px 0;padding-left:26px;position:relative}
+.checklist li::before{content:"□";position:absolute;left:0;top:0;color:var(--teal);font-weight:800}
+.small{font-size:13px;color:var(--muted)}
+.table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:12px;overflow:hidden}
+.table th{background:var(--teal-dark);color:#fff;text-align:left;font-size:13px;padding:10px}
+.table td{border:1px solid var(--line);padding:9px;vertical-align:top;font-size:13px}
+.table tr:nth-child(even) td{background:#fbfbfb}
+.footer{font-size:12px;color:#6B7280;border-top:1px solid var(--line);margin:28px auto 0;padding:18px 20px 28px;max-width:980px}
+.refs{font-size:12px;color:#4B5563}
+.pagebreak{page-break-before:always}
+.cover{min-height:92vh;display:flex;align-items:center}
+.cover .hero{width:100%}
+@media print{
+  body{background:#fff}
+  .section{box-shadow:none}
+  @page{size:A4;margin:12mm}
+  .grid,.grid3{gap:10px}
+  .hero{margin:-12mm -12mm 0 -12mm}
+}
+@media(max-width:700px){
+  h1{font-size:28px}
+  .grid,.grid3{grid-template-columns:1fr}
+  .hero{padding:34px 20px 26px}
+  main{padding:0 14px}
+}
+</style></head><body>
+
+<div class="cover">
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">TelePsiq<span style="color:#9EEAD8">_IA</span></div>
+    <div class="badge">Coleção temática</div>
+    <h1>Sono, telas, enurese e rotina</h1>
+    <p class="subtitle">Cartilhas, guias MFC/APS e roteiros de apoio à discussão clínica no telematriciamento.</p>
+    <div class="meta">Lote 5 · Versão 1.0 · 2026 · Versão preliminar para revisão técnica, clínica e institucional.</div>
+  </div>
+</header>
+</div>
+
+<main>
+
+<div class="section">
+<h2>Composição da coleção</h2>
+<ul>
+<li>Cartilha — Higiene do sono em crianças e adolescentes.</li>
+<li>Guia MFC/APS — Higiene do sono.</li>
+<li>Roteiro de apoio — Sono.</li>
+<li>Cartilha — Telas, saúde digital e rotina familiar.</li>
+<li>Guia MFC/APS — Telas e saúde digital.</li>
+<li>Roteiro de apoio — Telas.</li>
+<li>Cartilha — Enurese noturna.</li>
+<li>Guia MFC/APS — Enurese noturna.</li>
+<li>Roteiro de apoio — Enurese.</li>
+<li>Cartilha — Rotina familiar protetiva.</li>
+<li>Roteiro de apoio — Rotina.</li>
+</ul>
+</div>
+<div class="notice">Todos os roteiros são materiais de apoio à organização da demanda para telematriciamento. Não são escalas, não são instrumentos diagnósticos validados e não devem ser usados para coleta ou armazenamento de dados identificáveis no TelePsiq_IA.</div>
+
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Higiene do sono em crianças e adolescentes</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Para famílias e cuidadores.</strong> Este material ajuda a organizar hábitos de sono no cotidiano. Ele não substitui avaliação profissional quando a criança ou adolescente apresenta sofrimento, prejuízo escolar, roncos importantes, pausas respiratórias, sonolência intensa ou dificuldade persistente para dormir.</div>
+
+<div class="section">
+<h2>Por que o sono importa?</h2>
+<p>O sono participa do crescimento, da aprendizagem, da memória, do humor, da atenção e da regulação emocional. Quando a criança dorme pouco ou dorme mal, pode parecer mais irritada, desatenta, impulsiva, triste, ansiosa ou cansada.</p>
+<div class="callout">Higiene do sono não é “forçar a dormir”. É organizar rotina, ambiente e combinados para o corpo entender que a noite é hora de desacelerar.</div>
+</div>
+
+<div class="section">
+<h2>Quanto tempo de sono costuma ser recomendado?</h2>
+<table class="table">
+<tr><th>Faixa etária</th><th>Tempo total em 24 horas</th><th>Observação</th></tr>
+<tr><td>4 a 12 meses</td><td>12 a 16 horas</td><td>Inclui cochilos.</td></tr>
+<tr><td>1 a 2 anos</td><td>11 a 14 horas</td><td>Inclui cochilos.</td></tr>
+<tr><td>3 a 5 anos</td><td>10 a 13 horas</td><td>Algumas crianças ainda precisam de cochilo.</td></tr>
+<tr><td>6 a 12 anos</td><td>9 a 12 horas</td><td>Rotina regular ajuda atenção e aprendizagem.</td></tr>
+<tr><td>13 a 18 anos</td><td>8 a 10 horas</td><td>Adolescentes tendem a dormir tarde, mas ainda precisam de sono suficiente.</td></tr>
+</table>
+<p class="small">Esses valores são referências gerais. Necessidades individuais podem variar.</p>
+</div>
+
+<div class="section">
+<h2>O que mais atrapalha o sono?</h2>
+<div class="grid">
+<div class="card amber"><h3>Telas à noite</h3><p>Celular, tablet, videogame e vídeos antes de dormir ativam o cérebro e podem atrasar o sono.</p></div>
+<div class="card amber"><h3>Rotina imprevisível</h3><p>Dormir cada dia em um horário dificulta o corpo reconhecer a hora de descansar.</p></div>
+<div class="card amber"><h3>Sonecas fora de hora</h3><p>Em crianças maiores, cochilos longos no fim da tarde podem atrapalhar o sono noturno.</p></div>
+<div class="card amber"><h3>Brigas na hora de dormir</h3><p>Discussões, ameaças ou castigos podem aumentar ansiedade e resistência.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Estratégias práticas para a noite</h2>
+<ul>
+<li>Definir horário aproximado para dormir e acordar, inclusive nos fins de semana.</li>
+<li>Criar uma sequência simples: banho, pijama, escovar dentes, história curta, luz baixa e dormir.</li>
+<li>Evitar telas pelo menos na parte final da noite, especialmente no quarto.</li>
+<li>Deixar o ambiente escuro, calmo e confortável.</li>
+<li>Evitar bebidas estimulantes para crianças e adolescentes.</li>
+<li>Para adolescentes, combinar horário de guardar o celular fora do quarto.</li>
+<li>Valorizar pequenas conquistas, sem humilhar ou comparar com irmãos/colegas.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Sonecas: quando ajudam e quando atrapalham?</h2>
+<table class="table">
+<tr><th>Idade</th><th>Orientação prática</th></tr>
+<tr><td>0 a 2 anos</td><td>Cochilos fazem parte do desenvolvimento e costumam ser necessários.</td></tr>
+<tr><td>3 a 4 anos</td><td>Algumas crianças ainda precisam. Observar se o cochilo não atrasa demais o sono noturno.</td></tr>
+<tr><td>5 anos ou mais</td><td>A maioria já não precisa de cochilo diário. Se dormir de dia e ficar desperta à noite, pode ser necessário ajustar.</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Quando procurar ajuda?</h2>
+<div class="safety">
+<ul>
+<li>Roncos frequentes, pausas na respiração ou sono muito agitado.</li>
+<li>Sonolência diurna intensa, queda de rendimento ou cochilos involuntários.</li>
+<li>Insônia persistente apesar de rotina adequada.</li>
+<li>Pesadelos, medos ou ansiedade que impedem a criança de dormir.</li>
+<li>Mudança brusca do sono junto com tristeza, irritabilidade, isolamento ou sofrimento importante.</li>
+</ul>
+</div>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Higiene do Sono — Atualização 2021.</li>
+<li>Paruthi S. et al. Recommended Amount of Sleep for Pediatric Populations: A Consensus Statement of the American Academy of Sleep Medicine. Journal of Clinical Sleep Medicine, 2016.</li>
+<li>American Academy of Pediatrics. Statement of endorsement: Recommended amount of sleep for pediatric populations, 2016.</li>
+<li>Owens J.A.; Dalzell V. BEARS Sleep Screening Tool, 2005.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Higiene do sono: guia para MFC/APS</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Para MFC/APS.</strong> Guia prático para abordagem inicial de queixas de sono em crianças e adolescentes. Não substitui avaliação clínica individualizada nem protocolos institucionais.</div>
+
+<div class="section">
+<h2>Objetivo na APS</h2>
+<p>Nas queixas de sono, a APS pode identificar padrões de rotina, orientar higiene do sono, reconhecer sinais de alerta, avaliar comorbidades e decidir quando discutir o caso em telematriciamento ou encaminhar.</p>
+<div class="callout">Pergunta orientadora: o problema principal é dificuldade para iniciar o sono, despertares, sono insuficiente, sonolência diurna, comportamento noturno ou suspeita de condição clínica?</div>
+</div>
+
+<div class="section">
+<h2>Triagem breve com BEARS</h2>
+<table class="table">
+<tr><th>Domínio</th><th>Perguntas úteis</th></tr>
+<tr><td>B — Bedtime problems</td><td>Há resistência para ir dormir? Precisa de adulto/tela/mamadeira para adormecer?</td></tr>
+<tr><td>E — Excessive daytime sleepiness</td><td>Fica sonolento durante o dia? Dorme na escola, no carro ou no sofá?</td></tr>
+<tr><td>A — Awakenings</td><td>Acorda à noite? Quantas vezes? Consegue voltar a dormir?</td></tr>
+<tr><td>R — Regularity and duration</td><td>Que horas dorme/acorda em dias úteis e fins de semana? Quantas horas dorme?</td></tr>
+<tr><td>S — Snoring</td><td>Ronca? Há pausas respiratórias, respiração oral ou sono muito agitado?</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Pontos clínicos essenciais</h2>
+<div class="grid">
+<div class="card teal"><h3>Rotina</h3><p>Horários, sonecas, telas, ambiente, quarto compartilhado, alimentação noturna, cochilos e atividade física.</p></div>
+<div class="card blue"><h3>Desenvolvimento</h3><p>Idade, neurodesenvolvimento, TEA/TDAH, ansiedade de separação, medos, autonomia para dormir.</p></div>
+<div class="card purple"><h3>Comorbidades</h3><p>Ansiedade, depressão, TDAH, dor, refluxo, rinite, asma, obesidade, epilepsia, uso de medicações.</p></div>
+<div class="card red"><h3>Risco</h3><p>Roncos intensos, pausas respiratórias, sonolência incapacitante, queda escolar importante, sofrimento emocional.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Manejo inicial na APS</h2>
+<ul>
+<li>Construir rotina de desaceleração de 20 a 40 minutos antes de dormir.</li>
+<li>Orientar retirada gradual de telas no período noturno, principalmente no quarto.</li>
+<li>Reduzir variabilidade extrema de horários entre semana e fim de semana.</li>
+<li>Ajustar cochilos quando atrapalham o sono noturno, conforme idade.</li>
+<li>Trabalhar combinados familiares realistas, evitando culpabilização.</li>
+<li>Avaliar e tratar condições clínicas ou psicossociais associadas quando estiverem no escopo da APS.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Quando discutir em telematriciamento?</h2>
+<ul class="checklist">
+<li>Insônia persistente com sofrimento familiar ou prejuízo escolar.</li>
+<li>Dúvida entre problema comportamental do sono, ansiedade, TDAH, TEA ou depressão.</li>
+<li>Uso de medicações que podem interferir no sono.</li>
+<li>Queixa de sono em criança/adolescente com transtorno do neurodesenvolvimento.</li>
+<li>Família com dificuldade para implementar rotina apesar de orientações iniciais.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Quando encaminhar ou avaliar com prioridade?</h2>
+<div class="safety">
+<ul>
+<li>Suspeita de apneia obstrutiva do sono: roncos frequentes, pausas respiratórias, engasgos, respiração oral importante.</li>
+<li>Sonolência diurna intensa com risco funcional.</li>
+<li>Eventos noturnos atípicos, suspeita de crise epiléptica ou condição neurológica.</li>
+<li>Sofrimento emocional importante, risco psicossocial ou suspeita de violência/negligência.</li>
+</ul>
+</div>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Higiene do Sono — Atualização 2021.</li>
+<li>Paruthi S. et al. Recommended Amount of Sleep for Pediatric Populations: A Consensus Statement of the American Academy of Sleep Medicine. Journal of Clinical Sleep Medicine, 2016.</li>
+<li>American Academy of Pediatrics. Statement of endorsement: Recommended amount of sleep for pediatric populations, 2016.</li>
+<li>Owens J.A.; Dalzell V. BEARS Sleep Screening Tool, 2005.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Roteiro de apoio à discussão clínica no telematriciamento — Sono</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Uso previsto:</strong> roteiro para organizar a discussão clínica antes do telematriciamento. Não é escala, não é instrumento diagnóstico validado e não deve ser usado para armazenar dados identificáveis no TelePsiq_IA.</div>
+
+<div class="section">
+<h2>1. Motivo da discussão</h2>
+<ul class="checklist">
+<li>Qual é a dúvida principal da equipe: insônia, despertares, sono insuficiente, sonolência, pesadelos, roncos, rotina familiar ou medicação?</li>
+<li>Qual decisão a equipe espera ao final da discussão?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>2. Caracterização do sono</h2>
+<ul class="checklist">
+<li>Que horas a criança/adolescente costuma deitar, dormir e acordar?</li>
+<li>Há diferença importante entre dias úteis e fins de semana?</li>
+<li>Quanto tempo leva para adormecer?</li>
+<li>Acorda durante a noite? Como volta a dormir?</li>
+<li>Há sonecas? Em qual horário e por quanto tempo?</li>
+<li>Há uso de tela antes de dormir ou celular no quarto?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Prejuízo e contexto</h2>
+<ul class="checklist">
+<li>Há sonolência diurna, irritabilidade, queda escolar, atrasos, faltas ou conflitos familiares?</li>
+<li>A família tem rotina previsível para noite e manhã?</li>
+<li>Existem fatores de estresse, mudanças recentes, medo de dormir, ansiedade ou sofrimento emocional?</li>
+<li>A escola observou cansaço, desatenção ou sono em sala?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. Sinais de alerta</h2>
+<div class="safety">
+<ul class="checklist">
+<li>Roncos frequentes, pausas respiratórias, respiração oral ou sono muito agitado?</li>
+<li>Sonolência intensa ou cochilos involuntários?</li>
+<li>Eventos noturnos atípicos, confusão prolongada ou suspeita neurológica?</li>
+<li>Há sofrimento emocional importante, isolamento, tristeza ou risco psicossocial?</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h2>5. Condutas já tentadas</h2>
+<ul class="checklist">
+<li>Quais orientações de higiene do sono já foram feitas?</li>
+<li>A família conseguiu retirar telas do quarto ou reduzir uso noturno?</li>
+<li>Foi feita revisão de medicações, cafeína/energéticos e rotina de atividade física?</li>
+<li>Há tratamento de comorbidades clínicas, ansiedade, TDAH, TEA ou depressão?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Pergunta final para a matriciadora</h2>
+<div class="callout">Formule em uma frase: “Gostaríamos de discutir este caso para decidir se...”</div>
+<ul class="checklist">
+<li>...o manejo comportamental do sono na APS é suficiente.</li>
+<li>...há hipótese psiquiátrica ou do neurodesenvolvimento associada.</li>
+<li>...há necessidade de encaminhamento especializado ou avaliação presencial.</li>
+<li>...há ajuste de plano terapêutico compartilhado a combinar com família/escola.</li>
+</ul>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Higiene do Sono — Atualização 2021.</li>
+<li>Paruthi S. et al. Recommended Amount of Sleep for Pediatric Populations: A Consensus Statement of the American Academy of Sleep Medicine. Journal of Clinical Sleep Medicine, 2016.</li>
+<li>American Academy of Pediatrics. Statement of endorsement: Recommended amount of sleep for pediatric populations, 2016.</li>
+<li>Owens J.A.; Dalzell V. BEARS Sleep Screening Tool, 2005.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Telas, saúde digital e rotina familiar</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Para famílias e cuidadores.</strong> O objetivo não é demonizar a tecnologia, mas ajudar a construir uso mais seguro, equilibrado e compatível com sono, escola, brincadeiras, vínculos e saúde mental.</div>
+
+<div class="section">
+<h2>Nem toda tela é igual</h2>
+<p>Videochamada com familiar, aula online, jogo, rede social, vídeo curto, desenho, pesquisa escolar e conversa com amigos são usos diferentes. Por isso, além do tempo, é importante olhar para: conteúdo, horário, companhia, impacto no sono, segurança e reação da criança quando a tela acaba.</p>
+<div class="callout">A melhor regra é aquela que a família consegue sustentar com consistência, conversa e exemplo dos adultos.</div>
+</div>
+
+<div class="section">
+<h2>Orientações gerais por idade</h2>
+<table class="table">
+<tr><th>Faixa etária</th><th>Orientação prática</th><th>Cuidados</th></tr>
+<tr><td>0 a 2 anos</td><td>Evitar telas, exceto videochamadas breves com adulto.</td><td>Evitar TV de fundo e vídeos para acalmar como rotina.</td></tr>
+<tr><td>2 a 5 anos</td><td>Uso limitado, com conteúdo de qualidade e adulto junto.</td><td>Evitar tela em refeições, no quarto e antes de dormir.</td></tr>
+<tr><td>6 a 10 anos</td><td>Combinar horários, locais e conteúdos.</td><td>Supervisão, controle parental e atividades fora da tela.</td></tr>
+<tr><td>11 a 18 anos</td><td>Construir plano familiar com participação do adolescente.</td><td>Preservar sono, escola, convivência, privacidade e segurança digital.</td></tr>
+</table>
+<p class="small">Para crianças maiores e adolescentes, recomendações atuais valorizam plano familiar, qualidade do uso, segurança e preservação da rotina, não apenas uma contagem rígida de horas.</p>
+</div>
+
+<div class="section">
+<h2>Sinais de que o uso está prejudicando</h2>
+<div class="grid">
+<div class="card red"><h3>Sono</h3><p>Dorme tarde por causa da tela, usa celular de madrugada ou acorda cansado.</p></div>
+<div class="card red"><h3>Comportamento</h3><p>Fica muito irritado, agressivo ou desesperado quando a tela termina.</p></div>
+<div class="card red"><h3>Escola</h3><p>Perde tarefas, falta aula, cai rendimento ou não consegue se concentrar.</p></div>
+<div class="card red"><h3>Vínculos</h3><p>Abandona brincadeiras, esportes, amigos, refeições e conversas familiares.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Estratégias para reduzir sem guerra diária</h2>
+<ol>
+<li><strong>Combine antes:</strong> diga quanto tempo, quando começa e quando termina.</li>
+<li><strong>Use transição:</strong> avise 10 minutos antes de desligar.</li>
+<li><strong>Crie zonas livres:</strong> mesa, quarto e hora de dormir sem telas.</li>
+<li><strong>Ofereça alternativa concreta:</strong> brincar, desenhar, bola, banho, leitura, música, passeio.</li>
+<li><strong>Faça contrato familiar:</strong> regras simples, escritas e visíveis.</li>
+<li><strong>Adultos dão exemplo:</strong> reduzir celular em refeições e conversas ajuda mais do que longos discursos.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>Segurança digital</h2>
+<ul>
+<li>Conheça jogos, aplicativos e redes usadas pela criança/adolescente.</li>
+<li>Use configurações de privacidade e controle parental conforme idade.</li>
+<li>Converse sobre não enviar dados pessoais, fotos íntimas, endereço, escola ou localização.</li>
+<li>Oriente que situações de medo, ameaça, humilhação, contato estranho ou conteúdo inadequado devem ser contadas a um adulto de confiança.</li>
+<li>Evite expor a criança nas redes sem necessidade e sem considerar privacidade.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Quando procurar ajuda?</h2>
+<div class="safety">
+<ul>
+<li>Perda importante de sono, escola, alimentação, higiene ou convivência.</li>
+<li>Agressividade intensa quando a tela é retirada.</li>
+<li>Exposição a ameaças, assédio, humilhação, cyberbullying ou conteúdo inadequado.</li>
+<li>Sofrimento emocional, isolamento, tristeza, ansiedade ou queda funcional associada ao ambiente digital.</li>
+</ul>
+</div>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Manual de Orientação #MenosTelas #MaisSaúde — Atualização 2024.</li>
+<li>Governo Federal. Crianças, adolescentes e telas: guia sobre usos de dispositivos digitais, 2025.</li>
+<li>American Academy of Pediatrics / HealthyChildren.org. Family Media Plan.</li>
+<li>World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age, 2019.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Telas e saúde digital: guia para MFC/APS</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Para MFC/APS.</strong> Guia para abordar uso de telas sem culpabilizar a família, integrando saúde mental, sono, escola, segurança digital e rotina.</div>
+
+<div class="section">
+<h2>Princípio clínico</h2>
+<p>O uso de telas deve ser avaliado pelo impacto funcional. A pergunta não é apenas “quantas horas?”, mas “o que a tela substituiu, em que horário ocorre, com que conteúdo, com que supervisão e com que prejuízo?”.</p>
+<div class="callout">Na APS, a abordagem mais efetiva costuma ser concreta, não moralizante: validar a dificuldade, mapear o padrão de uso e negociar uma mudança pequena e mensurável.</div>
+</div>
+
+<div class="section">
+<h2>Perguntas-chave na consulta</h2>
+<ul class="checklist">
+<li>Quais dispositivos usa: TV, celular, tablet, videogame, computador?</li>
+<li>Quanto tempo em dia útil e fim de semana?</li>
+<li>Usa tela antes de dormir ou durante a madrugada?</li>
+<li>Tem celular no quarto?</li>
+<li>O uso interfere em sono, escola, alimentação, higiene, brincadeiras ou convivência?</li>
+<li>Como reage quando precisa desligar?</li>
+<li>Quais conteúdos, jogos ou redes utiliza?</li>
+<li>Há supervisão, controle parental ou regras familiares?</li>
+<li>Há sinais de cyberbullying, exposição a conteúdo inadequado ou contato de risco?</li>
+<li>Os adultos da casa conseguem sustentar os combinados?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Orientação em 3 passos</h2>
+<div class="grid3">
+<div class="card teal"><h3>1. Validar</h3><p>“Muitas famílias estão enfrentando isso; vamos pensar em uma regra possível para a rotina de vocês.”</p></div>
+<div class="card blue"><h3>2. Priorizar</h3><p>Começar por uma mudança de maior impacto: retirar tela do quarto, preservar sono ou tirar tela das refeições.</p></div>
+<div class="card green"><h3>3. Pactuar</h3><p>Combinar horário, local, duração, conteúdo e alternativa fora da tela.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Sinais de maior gravidade</h2>
+<div class="safety">
+<ul>
+<li>Prejuízo importante de sono, escola, vínculos ou autocuidado.</li>
+<li>Uso noturno persistente com sonolência diurna e queda funcional.</li>
+<li>Agressividade intensa ou sofrimento importante quando a tela é interrompida.</li>
+<li>Contato com situações de ameaça, humilhação, violência digital ou exploração.</li>
+<li>Associação com ansiedade, depressão, isolamento, TDAH, TEA ou conflito familiar grave.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h2>Manejo inicial na APS</h2>
+<ul>
+<li>Construir plano familiar com regras simples e progressivas.</li>
+<li>Recomendar áreas sem tela: quarto, refeições, momentos de conversa e rotina de sono.</li>
+<li>Definir “horário de carregar celular” fora do quarto.</li>
+<li>Orientar substituições concretas: atividade física, brincar, tarefas curtas, leitura, convivência.</li>
+<li>Revisar segurança digital: privacidade, contatos, idade mínima de plataformas e supervisão.</li>
+<li>Evitar retirada abrupta como única estratégia quando há uso intenso; preferir redução gradual e sustentada, salvo situações de risco.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Quando discutir em telematriciamento?</h2>
+<ul class="checklist">
+<li>Dúvida se o uso de telas é causa, consequência ou marcador de sofrimento emocional.</li>
+<li>Prejuízo funcional associado a ansiedade, depressão, TDAH, TEA ou insônia.</li>
+<li>Conflito familiar intenso em torno de limites.</li>
+<li>Uso problemático com isolamento, irritabilidade, queda escolar ou inversão sono-vigília.</li>
+<li>Necessidade de orientar escola/família em plano compartilhado.</li>
+</ul>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Manual de Orientação #MenosTelas #MaisSaúde — Atualização 2024.</li>
+<li>Governo Federal. Crianças, adolescentes e telas: guia sobre usos de dispositivos digitais, 2025.</li>
+<li>American Academy of Pediatrics / HealthyChildren.org. Family Media Plan.</li>
+<li>World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age, 2019.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Roteiro de apoio à discussão clínica no telematriciamento — Telas</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Uso previsto:</strong> roteiro para organizar a discussão clínica antes do telematriciamento. Não é escala, não é instrumento diagnóstico validado e não deve coletar dados identificáveis no TelePsiq_IA.</div>
+
+<div class="section">
+<h2>1. Motivo da discussão</h2>
+<ul class="checklist">
+<li>A dúvida principal é limite familiar, prejuízo escolar, sono, comportamento, segurança digital, sofrimento emocional ou possível dependência comportamental?</li>
+<li>Qual decisão a equipe espera ao final da discussão?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>2. Padrão de uso</h2>
+<ul class="checklist">
+<li>Quais telas são mais usadas?</li>
+<li>Em quais horários: manhã, tarde, noite, madrugada?</li>
+<li>O uso é solitário ou acompanhado por adulto?</li>
+<li>O conteúdo é conhecido pela família?</li>
+<li>Há uso no quarto, durante refeições ou antes de dormir?</li>
+<li>Há diferença entre dias úteis e fim de semana?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Impacto funcional</h2>
+<ul class="checklist">
+<li>Houve alteração de sono, escola, alimentação, higiene, brincadeiras ou convivência?</li>
+<li>Há irritabilidade ou agressividade importante quando a tela termina?</li>
+<li>A criança/adolescente ainda se interessa por atividades fora da tela?</li>
+<li>Há isolamento social ou perda de vínculos presenciais?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. Segurança digital</h2>
+<ul class="checklist">
+<li>Há redes sociais, jogos online, grupos ou contatos desconhecidos?</li>
+<li>Há relato de ameaça, humilhação, cyberbullying, exposição de imagens ou conteúdo inadequado?</li>
+<li>A família usa controle parental, privacidade e supervisão compatíveis com a idade?</li>
+<li>A escola está envolvida quando há conflito digital escolar?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. Hipóteses associadas</h2>
+<ul class="checklist">
+<li>O uso parece relacionado a ansiedade, depressão, solidão, bullying, TDAH, TEA, dificuldade escolar ou conflito familiar?</li>
+<li>Há inversão sono-vigília ou uso de tela como principal forma de regular emoções?</li>
+<li>Há suspeita de risco psicossocial ou violação de direitos?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Condutas já tentadas</h2>
+<ul class="checklist">
+<li>A família tentou combinar horários, retirar tela do quarto ou criar zonas sem tela?</li>
+<li>Houve redução gradual? Funcionou por quanto tempo?</li>
+<li>Quais alternativas fora da tela foram oferecidas?</li>
+<li>A escola ou rede de proteção já foi acionada quando necessário?</li>
+</ul>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Manual de Orientação #MenosTelas #MaisSaúde — Atualização 2024.</li>
+<li>Governo Federal. Crianças, adolescentes e telas: guia sobre usos de dispositivos digitais, 2025.</li>
+<li>American Academy of Pediatrics / HealthyChildren.org. Family Media Plan.</li>
+<li>World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age, 2019.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Enurese noturna: como apoiar sem culpa</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Para famílias e cuidadores.</strong> Enurese não é preguiça, birra nem falta de caráter. A criança não deve ser humilhada, punida ou comparada.</div>
+
+<div class="section">
+<h2>O que é enurese noturna?</h2>
+<p>É quando a criança, em idade em que já se espera maior controle, molha a cama durante o sono de forma repetida. Muitas crianças melhoram com o tempo, mas orientação adequada pode reduzir sofrimento, conflitos e impacto na autoestima.</p>
+<div class="callout">A pergunta central não é “por que ela faz isso?”, mas “como podemos ajudar de forma respeitosa e consistente?”.</div>
+</div>
+
+<div class="section">
+<h2>O que pode estar envolvido?</h2>
+<div class="grid">
+<div class="card blue"><h3>Maturação</h3><p>Algumas crianças demoram mais para desenvolver controle noturno.</p></div>
+<div class="card blue"><h3>Sono profundo</h3><p>A criança pode ter dificuldade de acordar com a bexiga cheia.</p></div>
+<div class="card blue"><h3>Produção de urina</h3><p>Algumas crianças produzem mais urina à noite.</p></div>
+<div class="card blue"><h3>Constipação</h3><p>Intestino preso pode piorar escapes urinários.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>O que ajuda em casa?</h2>
+<ul>
+<li>Evitar broncas, castigos, ameaças ou exposição da criança.</li>
+<li>Manter rotina de ir ao banheiro antes de dormir.</li>
+<li>Oferecer líquidos ao longo do dia e reduzir grandes volumes perto da hora de dormir, conforme orientação profissional.</li>
+<li>Observar constipação e dor ao evacuar.</li>
+<li>Envolver a criança em cuidados simples, como trocar pijama ou lençol, sem punição e sem vergonha.</li>
+<li>Valorizar noites secas e pequenas conquistas.</li>
+<li>Conversar com a UBS quando o problema persiste, causa sofrimento ou aparece junto com outros sintomas.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>O que não ajuda</h2>
+<div class="grid">
+<div class="card red"><h3>Humilhação</h3><p>Chamar de bebê, expor para parentes ou comparar com irmãos aumenta sofrimento.</p></div>
+<div class="card red"><h3>Punição</h3><p>Castigar por molhar a cama não ensina controle noturno.</p></div>
+<div class="card red"><h3>Acordar muitas vezes</h3><p>Acordar repetidamente pode piorar sono e não resolver a causa.</p></div>
+<div class="card red"><h3>Ignorar sinais</h3><p>Dor, escapes diurnos, sede excessiva ou mudança brusca precisam de avaliação.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Quando procurar atendimento?</h2>
+<div class="safety">
+<ul>
+<li>A criança tem 5 anos ou mais e molha a cama repetidamente, com sofrimento familiar ou da criança.</li>
+<li>Há escape de urina durante o dia, urgência para urinar ou dor ao urinar.</li>
+<li>Há constipação importante.</li>
+<li>A criança voltou a molhar a cama depois de longo período seca.</li>
+<li>Há sede excessiva, perda de peso, febre, dor, alteração neurológica ou mudança importante de comportamento.</li>
+<li>Há suspeita de violência, negligência ou sofrimento emocional significativo.</li>
+</ul>
+</div>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>NICE. Bedwetting in under 19s: Clinical Guideline CG111.</li>
+<li>International Children’s Continence Society. Management and treatment of nocturnal enuresis: updated standardization document, 2020.</li>
+<li>DSM-5-TR. American Psychiatric Association, 2022.</li>
+<li>Sociedade Brasileira de Pediatria. Materiais técnicos sobre enurese noturna e orientação familiar.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Enurese noturna: guia para MFC/APS</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Para MFC/APS.</strong> Guia prático para avaliação inicial de enurese noturna na APS e organização de casos para telematriciamento quando houver componente emocional, comportamental, familiar ou de desenvolvimento.</div>
+
+<div class="section">
+<h2>Definição operacional</h2>
+<p>Considerar enurese noturna quando há micção involuntária durante o sono em idade em que o controle noturno é esperado, especialmente a partir de 5 anos, com recorrência e impacto clínico/familiar. A avaliação deve diferenciar enurese monossintomática de situações com sintomas urinários diurnos ou sinais de condição clínica.</p>
+</div>
+
+<div class="section">
+<h2>Avaliação inicial na APS</h2>
+<ul class="checklist">
+<li>Idade, frequência dos episódios e duração do quadro.</li>
+<li>Controle diurno: urgência, escapes, aumento de frequência, dor ou dificuldade para urinar.</li>
+<li>História de período seco prévio e início secundário.</li>
+<li>Constipação, dor abdominal, evacuação dolorosa ou retenção fecal.</li>
+<li>Ingestão de líquidos, rotina de banheiro e hábitos antes de dormir.</li>
+<li>Sono: roncos, pausas respiratórias, sono muito profundo, despertares.</li>
+<li>Sofrimento emocional, bullying, conflitos familiares, mudanças recentes.</li>
+<li>Impacto na autoestima, escola, viagens, acampamentos e convivência.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Sinais de alerta clínico</h2>
+<div class="safety">
+<ul>
+<li>Sintomas urinários diurnos persistentes.</li>
+<li>Dor ao urinar, febre, hematúria ou suspeita de infecção urinária.</li>
+<li>Sede excessiva, poliúria, perda de peso ou suspeita metabólica.</li>
+<li>Constipação grave ou escape fecal.</li>
+<li>Alterações neurológicas, marcha alterada, dor lombar ou sinais cutâneos lombossacros.</li>
+<li>Enurese secundária associada a sofrimento intenso, suspeita de violência ou mudança psicossocial relevante.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h2>Manejo inicial possível na APS</h2>
+<ul>
+<li>Psicoeducação: retirar culpa, evitar punição e normalizar a busca de ajuda.</li>
+<li>Diário simples de noites molhadas/secas, ingestão de líquidos e evacuações, quando útil.</li>
+<li>Tratar constipação quando presente.</li>
+<li>Orientar rotina de micção diurna e ida ao banheiro antes de dormir.</li>
+<li>Organizar expectativas realistas com família e criança.</li>
+<li>Considerar encaminhamento conforme protocolos locais quando houver sinais de alerta ou falha de manejo inicial.</li>
+</ul>
+<p class="small">Opções como alarme urinário e medicação podem fazer parte do manejo em contextos específicos, mas devem seguir avaliação clínica, disponibilidade, adesão familiar e protocolos locais. Este guia não orienta dose ou prescrição individualizada.</p>
+</div>
+
+<div class="section">
+<h2>Quando discutir em telematriciamento?</h2>
+<ul class="checklist">
+<li>Enurese associada a ansiedade, baixa autoestima, conflitos familiares ou sofrimento emocional.</li>
+<li>Dúvida sobre relação com TDAH, TEA, sono, trauma ou regressão comportamental.</li>
+<li>Família utiliza punições ou há dinâmica de vergonha/humilhação.</li>
+<li>Enurese secundária após mudança de vida, perda, separação, bullying ou estressor importante.</li>
+<li>Necessidade de plano compartilhado com escola/família/rede.</li>
+</ul>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>NICE. Bedwetting in under 19s: Clinical Guideline CG111.</li>
+<li>International Children’s Continence Society. Management and treatment of nocturnal enuresis: updated standardization document, 2020.</li>
+<li>DSM-5-TR. American Psychiatric Association, 2022.</li>
+<li>Sociedade Brasileira de Pediatria. Materiais técnicos sobre enurese noturna e orientação familiar.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Roteiro de apoio à discussão clínica no telematriciamento — Enurese</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Uso previsto:</strong> roteiro para organizar a discussão clínica antes do telematriciamento. Não é escala, não é instrumento diagnóstico validado e não deve coletar dados identificáveis no TelePsiq_IA.</div>
+
+<div class="section">
+<h2>1. Motivo da discussão</h2>
+<ul class="checklist">
+<li>A dúvida principal é manejo familiar, sofrimento emocional, sinais clínicos, encaminhamento, rotina ou hipótese associada?</li>
+<li>Qual decisão a equipe espera ao final da discussão?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>2. Caracterização da enurese</h2>
+<ul class="checklist">
+<li>Qual a idade da criança/adolescente?</li>
+<li>Quantas noites por semana costuma molhar a cama?</li>
+<li>O quadro sempre existiu ou começou depois de período seco?</li>
+<li>Há escapes durante o dia, urgência, dor ao urinar ou aumento de frequência?</li>
+<li>Há constipação, dor abdominal ou escape fecal?</li>
+<li>Há sede excessiva, perda de peso, febre ou outros sinais clínicos?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Sono, rotina e ambiente familiar</h2>
+<ul class="checklist">
+<li>Há roncos, sono muito agitado ou suspeita de apneia?</li>
+<li>A criança vai ao banheiro antes de dormir?</li>
+<li>Como a família reage quando ocorre episódio?</li>
+<li>Há punição, vergonha, exposição ou comparação com irmãos?</li>
+<li>A criança participa de cuidados simples sem humilhação?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. Sofrimento emocional e contexto</h2>
+<ul class="checklist">
+<li>Há ansiedade, tristeza, isolamento, bullying ou queda de autoestima?</li>
+<li>Houve mudança recente: separação, luto, nascimento de irmão, troca de escola, conflito familiar?</li>
+<li>Há suspeita de violência, negligência ou violação de direitos?</li>
+<li>A escola precisa ser orientada em situações de viagens, passeios ou constrangimento?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. Condutas já tentadas</h2>
+<ul class="checklist">
+<li>Foi feita orientação de rotina miccional e ida ao banheiro antes de dormir?</li>
+<li>Constipação foi investigada/tratada?</li>
+<li>A família já usou calendário, reforço positivo, alarme ou outras estratégias?</li>
+<li>Há exames, tratamentos ou encaminhamentos prévios?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Pergunta final para a matriciadora</h2>
+<div class="callout">Formule a dúvida principal: manejo familiar, sofrimento emocional, hipótese associada, rede de apoio ou necessidade de encaminhamento.</div>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>NICE. Bedwetting in under 19s: Clinical Guideline CG111.</li>
+<li>International Children’s Continence Society. Management and treatment of nocturnal enuresis: updated standardization document, 2020.</li>
+<li>DSM-5-TR. American Psychiatric Association, 2022.</li>
+<li>Sociedade Brasileira de Pediatria. Materiais técnicos sobre enurese noturna e orientação familiar.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Rotina familiar protetiva</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Para famílias e cuidadores.</strong> A rotina não precisa ser perfeita. Ela precisa ser previsível o suficiente para ajudar a criança/adolescente a dormir, estudar, brincar, conviver e se cuidar.</div>
+
+<div class="section">
+<h2>Por que rotina protege saúde mental?</h2>
+<p>Rotinas previsíveis reduzem conflitos, ajudam na autonomia, organizam sono, alimentação, escola, higiene, brincadeiras e uso de telas. Para crianças com TDAH, TEA, ansiedade, dificuldades escolares ou irritabilidade, a previsibilidade pode ser ainda mais importante.</p>
+<div class="callout">Rotina boa é rotina possível: simples, repetida e adaptada à realidade da família.</div>
+</div>
+
+<div class="section">
+<h2>Os 5 pilares da rotina</h2>
+<div class="grid">
+<div class="card teal"><h3>Sono</h3><p>Horário de acordar e dormir, desaceleração noturna e telas fora do quarto.</p></div>
+<div class="card green"><h3>Corpo</h3><p>Alimentação, banho, escovar dentes, atividade física e brincadeira.</p></div>
+<div class="card blue"><h3>Escola</h3><p>Horário para tarefas, mochila, materiais e comunicação com professores.</p></div>
+<div class="card purple"><h3>Vínculos</h3><p>Conversas, refeições, brincadeiras, afeto e tempo de qualidade.</p></div>
+<div class="card amber"><h3>Telas</h3><p>Regras sobre horário, local, duração e conteúdo.</p></div>
+<div class="card pink"><h3>Autonomia</h3><p>Pequenas responsabilidades compatíveis com a idade.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Como começar sem sobrecarregar?</h2>
+<ol>
+<li>Escolha apenas uma rotina para organizar primeiro: manhã, tarefa escolar ou hora de dormir.</li>
+<li>Escreva 3 a 5 passos simples.</li>
+<li>Use combinados visuais quando possível.</li>
+<li>Avise transições: “daqui 10 minutos vamos guardar”.</li>
+<li>Elogie o esforço, não apenas o resultado.</li>
+<li>Revise a rotina após uma semana e ajuste o que não funcionou.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>Exemplo de rotina da noite</h2>
+<table class="table">
+<tr><th>Etapa</th><th>Como fazer</th></tr>
+<tr><td>Desacelerar</td><td>Reduzir agitação, luz forte e telas.</td></tr>
+<tr><td>Organizar o corpo</td><td>Banho, pijama, banheiro, escovar dentes.</td></tr>
+<tr><td>Conexão breve</td><td>História curta, conversa tranquila ou música calma.</td></tr>
+<tr><td>Dormir</td><td>Luz baixa, celular fora do quarto e horário combinado.</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Quando a rotina vira campo de batalha</h2>
+<ul>
+<li>Reduza o número de regras. Muitas regras ao mesmo tempo geram desistência.</li>
+<li>Evite discutir no pico da irritação; retome quando todos estiverem mais calmos.</li>
+<li>Transforme ordens longas em passos curtos.</li>
+<li>Combine consequências previsíveis e proporcionais, sem humilhar.</li>
+<li>Procure apoio se houver sofrimento intenso, agressividade, queda escolar ou exaustão familiar.</li>
+</ul>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Higiene do Sono — Atualização 2021.</li>
+<li>Sociedade Brasileira de Pediatria. Manual de Orientação #MenosTelas #MaisSaúde — Atualização 2024.</li>
+<li>Governo Federal. Crianças, adolescentes e telas: guia sobre usos de dispositivos digitais, 2025.</li>
+<li>World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age, 2019.</li>
+</ul>
+</div>
+</section>
+
+<section class="pagebreak">
+<div class="section" style="background:var(--teal-light);border-color:#b7e2da">
+<h2>Roteiro de apoio à discussão clínica no telematriciamento — Rotina</h2>
+<p class="small">Documento integrante do Lote 5 — Sono, telas, enurese e rotina.</p>
+</div>
+<div class="notice"><strong>Uso previsto:</strong> roteiro para organizar discussões em que a principal demanda envolve rotina familiar, sono, telas, escola, autonomia e conflitos cotidianos. Não é escala nem instrumento diagnóstico validado.</div>
+
+<div class="section">
+<h2>1. Motivo da discussão</h2>
+<ul class="checklist">
+<li>A dificuldade principal ocorre na manhã, escola, tarefa, refeições, banho, sono, telas ou limites?</li>
+<li>O objetivo da equipe é orientar família, escola, manejo comportamental ou avaliar hipótese clínica associada?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>2. Padrão da rotina</h2>
+<ul class="checklist">
+<li>Quais horários são mais difíceis no dia?</li>
+<li>A família tem combinados previsíveis ou cada dia funciona de um jeito?</li>
+<li>A criança/adolescente sabe o que se espera dela?</li>
+<li>Há uso de telas em momentos críticos, como manhã, refeições ou antes de dormir?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Impacto funcional</h2>
+<ul class="checklist">
+<li>Há atraso escolar, faltas, queda de rendimento ou conflitos frequentes?</li>
+<li>Há prejuízo de sono, higiene, alimentação ou convivência?</li>
+<li>A família está exausta ou sem conseguir sustentar limites?</li>
+<li>Há brigas intensas, agressividade ou sofrimento emocional?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. Hipóteses associadas</h2>
+<ul class="checklist">
+<li>A dificuldade de rotina parece relacionada a TDAH, TEA, ansiedade, depressão, dificuldade de aprendizagem ou privação de sono?</li>
+<li>Há mudanças familiares recentes ou estressores psicossociais?</li>
+<li>A escola descreve dificuldades semelhantes ou o problema ocorre principalmente em casa?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. Condutas já tentadas</h2>
+<ul class="checklist">
+<li>A família tentou quadro visual, rotina da noite, retirada de tela do quarto ou combinados escritos?</li>
+<li>O que funcionou mesmo que por pouco tempo?</li>
+<li>Quais orientações a APS já fez?</li>
+<li>A escola foi envolvida quando necessário?</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Pergunta final para a matriciadora</h2>
+<div class="callout">Ao final, definir uma mudança prioritária e possível para a próxima semana, evitando planos amplos demais.</div>
+</div>
+
+<div class="section refs">
+<h2>Referências técnicas consultadas</h2>
+<ul>
+<li>Sociedade Brasileira de Pediatria. Higiene do Sono — Atualização 2021.</li>
+<li>Sociedade Brasileira de Pediatria. Manual de Orientação #MenosTelas #MaisSaúde — Atualização 2024.</li>
+<li>Governo Federal. Crianças, adolescentes e telas: guia sobre usos de dispositivos digitais, 2025.</li>
+<li>World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age, 2019.</li>
+</ul>
+</div>
+</section>
+
+</main>
+
+<div class="footer">
+  <strong>TelePsiq_IA — Telematriciamento em Psiquiatria da Infância e Adolescência na APS</strong><br>
+  Fundação Pio XII / Hospital de Amor — Barretos-SP · Mestrado Profissional em Inovação em Saúde.<br>
+  Versão preliminar para revisão técnica, clínica e institucional. Material educativo/de apoio, sem finalidade diagnóstica isolada. Não substituir avaliação clínica, prontuário institucional, rede de proteção ou conduta médica individualizada.<br>
+  © 2026 Dra. Bárbara Sgavioli Massucato. Uso educacional com citação.
+</div>
+
+</body></html>

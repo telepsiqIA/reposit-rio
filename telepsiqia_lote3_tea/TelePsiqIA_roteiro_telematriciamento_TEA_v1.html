@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roteiro de apoio à discussão clínica no telematriciamento — TEA — TelePsiq_IA</title>
+<style>
+:root{
+  --teal:#0D7A6E;--teal-dark:#074840;--teal-light:#E7F5F2;
+  --amber:#F59E0B;--amber-light:#FFF7ED;
+  --blue:#1d4ed8;--blue-light:#eff6ff;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --red:#B91C1C;--red-light:#FEF2F2;
+  --green:#047857;--green-light:#ecfdf5;
+  --text:#374151;--muted:#6B7280;--line:#E5E7EB;--bg:#F9FAFB;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.52}
+.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:44px 28px 34px;border-bottom:8px solid #1FA88F}
+.wrap{max-width:980px;margin:0 auto}
+.brand{font-weight:800;font-size:20px;margin-bottom:28px;letter-spacing:.01em}
+.badge{display:inline-block;background:#fff;color:var(--teal-dark);font-weight:700;border-radius:999px;padding:6px 12px;font-size:13px;margin:8px 0 16px}
+h1{font-size:34px;line-height:1.12;margin:0 0 10px}
+.subtitle{font-size:17px;opacity:.95;margin:0 0 10px}.meta{font-size:13px;opacity:.9;margin-top:18px}
+main{max-width:980px;margin:28px auto;padding:0 20px}
+.section{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 24px rgba(7,72,64,.06)}
+h2{font-size:22px;line-height:1.25;color:var(--teal-dark);margin:0 0 12px}
+h3{font-size:17px;color:var(--teal-dark);margin:16px 0 8px}
+h4{font-size:15px;color:#111827;margin:12px 0 6px}
+p{margin:8px 0}
+.callout{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--teal-dark);margin:12px 0}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px 16px;margin:18px 0;color:#9a3412}
+.safety{background:#fef2f2;border:1px solid #fecaca;border-left:5px solid #B91C1C;border-radius:14px;padding:14px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff}
+.card.teal{background:var(--teal-light);border-color:#b7e2da}
+.card.blue{background:var(--blue-light);border-color:#bfdbfe}
+.card.amber{background:var(--amber-light);border-color:#fed7aa}
+.card.red{background:var(--red-light);border-color:#fecaca}
+.card.green{background:var(--green-light);border-color:#bbf7d0}
+.card.purple{background:var(--purple-light);border-color:#ddd6fe}
+ul,ol{margin:8px 0 8px 20px;padding:0}
+li{margin:4px 0}
+.checklist{list-style:none;margin-left:0}
+.checklist li{margin:7px 0;padding-left:26px;position:relative}
+.checklist li:before{content:"□";position:absolute;left:0;top:0;color:var(--teal);font-weight:700}
+.steps{counter-reset:step;list-style:none;margin-left:0}
+.steps li{counter-increment:step;margin:10px 0;padding-left:34px;position:relative}
+.steps li:before{content:counter(step);position:absolute;left:0;top:0;background:var(--teal);color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;font-size:12px;font-weight:700}
+table{width:100%;border-collapse:collapse;margin:12px 0;border-radius:14px;overflow:hidden;font-size:14px}
+th{background:var(--teal-dark);color:#fff;text-align:left;padding:10px}
+td{border:1px solid var(--line);padding:10px;vertical-align:top;background:#fff}
+.small{font-size:13px;color:var(--muted)}
+.footer{max-width:980px;margin:28px auto 0;padding:18px 20px 34px;color:#6b7280;font-size:12px;border-top:1px solid var(--line)}
+.ref{font-size:12px;color:#4b5563}
+.pagebreak{page-break-before:always}
+hr.sep{border:none;border-top:1px solid var(--line);margin:18px 0}
+@page{size:A4;margin:14mm 13mm 16mm 13mm}
+@media print{
+  body{background:#fff}
+  .hero{padding:26px 0 22px;margin:-14mm -13mm 10mm -13mm;border-bottom:5px solid #1FA88F}
+  .hero .wrap{padding:0 13mm}
+  main{padding:0;margin:0 auto}
+  .section{box-shadow:none;break-inside:avoid;margin:12px 0;padding:16px 18px}
+  .grid,.grid3{gap:10px}
+  h1{font-size:27px}.subtitle{font-size:14px}.brand{margin-bottom:16px;font-size:16px}
+  .footer{padding:12px 0 0;margin-top:12px}
+}
+@media(max-width:760px){.grid,.grid3{grid-template-columns:1fr}h1{font-size:29px}.hero{padding:34px 22px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">TelePsiq<span style="color:#9FE7DA">_IA</span></div>
+    <div class="badge">Roteiro de apoio à discussão clínica</div>
+    <h1>Roteiro de apoio à discussão clínica no telematriciamento — TEA</h1>
+    <p class="subtitle">Perguntas para organizar a discussão de casos de TEA, crises e escola antes do telematriciamento.</p>
+    <p class="meta">Lote 3 — TEA, crises e escola · Versão 1 · Maio/2026</p>
+  </div>
+</header>
+<main>
+
+<section class="section">
+  <h2>Finalidade do roteiro</h2>
+  <p>Este roteiro ajuda o MFC e a equipe da APS a organizar as principais informações antes da discussão do caso em telematriciamento com a matriciadora.</p>
+  <div class="callout">Não é escala, não é instrumento diagnóstico validado e não substitui avaliação clínica. Serve para qualificar a discussão e tornar a tele mais objetiva.</div>
+</section>
+
+<section class="section">
+  <h2>1. Motivo principal da discussão</h2>
+  <ul class="checklist">
+    <li>A dúvida principal é diagnóstico, manejo de crise, orientação familiar, orientação escolar, medicação, encaminhamento ou direitos/adaptações?</li>
+    <li>O caso envolve criança/adolescente com diagnóstico de TEA, suspeita de TEA ou outra condição do neurodesenvolvimento?</li>
+    <li>Qual decisão a equipe precisa tomar ao final da discussão?</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>2. Caracterização do quadro</h2>
+  <ul class="checklist">
+    <li>Quais sinais motivaram a hipótese ou o diagnóstico de TEA?</li>
+    <li>Há dificuldades de comunicação, interação social, flexibilidade, interesses restritos ou sensorialidade?</li>
+    <li>Há atraso/regressão de fala, perda de habilidades ou mudança importante recente?</li>
+    <li>O funcionamento varia muito entre casa e escola?</li>
+    <li>Há impacto em autocuidado, aprendizagem, sono, alimentação, segurança ou convivência?</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>3. Sobre as crises</h2>
+  <ul class="checklist">
+    <li>O que a família ou escola chama de crise: explosão, recolhimento, fuga, choro, agressividade, recusa, desligamento?</li>
+    <li>Qual a frequência, duração aproximada e contexto mais comum?</li>
+    <li>Quais sinais aparecem antes da crise?</li>
+    <li>Quais gatilhos são suspeitos: ruído, luz, cheiro, toque, mudança de rotina, espera, frustração, dor, sono ruim, fome?</li>
+    <li>O que costuma ajudar a regular?</li>
+    <li>O que piora a crise?</li>
+    <li>Houve risco de lesão, fuga, perda de consciência ou necessidade de urgência?</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>4. Contexto familiar e escolar</h2>
+  <ul class="checklist">
+    <li>Quem são os principais cuidadores e quais estratégias usam?</li>
+    <li>Há rotina previsível em casa?</li>
+    <li>A escola reconhece sinais precoces de sobrecarga?</li>
+    <li>Existem adaptações razoáveis, rotina visual, pausas ou plano de crise?</li>
+    <li>Família e escola têm comunicação regular?</li>
+    <li>Há risco de recusa escolar, suspensão recorrente, exclusão ou conflito importante com a escola?</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>5. Condições associadas e diferenciais</h2>
+  <ul class="checklist">
+    <li>Há sinais de TDAH, ansiedade, depressão, irritabilidade persistente, transtorno de aprendizagem ou deficiência intelectual?</li>
+    <li>Há alteração de sono, seletividade alimentar, constipação, dor, epilepsia ou outra condição clínica?</li>
+    <li>Há uso de medicamentos? Houve mudança recente, baixa adesão ou efeitos adversos?</li>
+    <li>Há suspeita de violência, negligência, bullying ou violação de direitos?</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>6. Rede acionada e pergunta final</h2>
+  <ul class="checklist">
+    <li>O caso já foi avaliado por pediatria, neurologia, psiquiatria, psicologia, fonoaudiologia, terapia ocupacional ou CAPSi?</li>
+    <li>Há relatório escolar ou registros das crises?</li>
+    <li>Quais orientações a APS já tentou?</li>
+    <li>Qual apoio a equipe espera da matriciadora nesta discussão?</li>
+  </ul>
+  <div class="notice"><strong>Para levar à tele:</strong> resumir em 3 pontos — principal problema, contexto em que ocorre, decisão que precisa ser tomada.</div>
+</section>
+
+
+<section class="section">
+  <h2>Referências-base consultadas</h2>
+  <p class="ref">Brasil. Lei nº 12.764, de 27 de dezembro de 2012. Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista.</p>
+  <p class="ref">Brasil. Lei nº 13.146, de 6 de julho de 2015. Lei Brasileira de Inclusão da Pessoa com Deficiência.</p>
+  <p class="ref">Ministério da Saúde. Transtorno do Espectro Autista — atenção primária, atenção especializada e linha de cuidado.</p>
+  <p class="ref">American Academy of Pediatrics. Identification, Evaluation, and Management of Children With Autism Spectrum Disorder. Pediatrics, 2020.</p>
+  <p class="ref">Centers for Disease Control and Prevention. Autism Spectrum Disorder: signs, symptoms and developmental monitoring.</p>
+  <p class="ref">NICE. Autism spectrum disorder in under 19s: support and management. Clinical guideline CG170.</p>
+  <p class="small">As referências sustentam a organização educativa e clínica geral do material. A aplicação deve considerar avaliação individual, protocolos locais e rede disponível.</p>
+</section>
+
+</main>
+<footer class="footer">TelePsiq_IA — Telematriciamento em Psiquiatria da Infância e Adolescência na APS<br>
+Fundação Pio XII / Hospital de Amor, Barretos-SP · Produto técnico de mestrado profissional<br>
+Versão preliminar para revisão técnica e institucional · Não substitui avaliação clínica, decisão profissional ou protocolos locais.</footer>
+</body>
+</html>
